@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
 import { gsap } from "gsap";
 import { FaBars } from "react-icons/fa6";
-import { FaShareFromSquare,FaSquareFacebook } from "react-icons/fa6";
+import { FaShareFromSquare, FaSquareFacebook } from "react-icons/fa6";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FiLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { Tab } from "../common";
+import { logo2 } from "../../assets";
 
 function Navbar() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -54,7 +55,7 @@ function Navbar() {
                     </p>
                 </div>
 
-                <div className="items-center justify-center hidden gap-1 mr-2 text-xl text-primary-red md:flex">
+                <div className="items-center justify-center hidden gap-1 mr-20 text-xl text-primary-red md:flex">
                     <Link to="/" className="mx-3 text-sm text-center underline">
                         View the 2020 attachment report
                     </Link>
@@ -67,6 +68,12 @@ function Navbar() {
                     <Link to="/">
                         <FiLink />
                     </Link>
+                    
+                    <img
+                        src={logo2}
+                        alt="logo"
+                        className="w-[3rem] h-[2.5rem] object-cover hidden md:block  absolute right-8 top-2"
+                    />
                 </div>
 
                 <FaShareFromSquare className="text-3xl cursor-pointer text-primary-orange md:hidden" />
@@ -81,8 +88,8 @@ function Navbar() {
                     <Link to="/" className="mx-3 text-sm text-center underline">
                         View the 2020 attachment report
                     </Link>
-                    <Link to="/" className="w-[8rem] border aspect-square">
-                        <img src="" alt="logo" />
+                    <Link to="/" className="w-[12rem]  aspect-square">
+                        <img src={logo2} alt="logo" />
                     </Link>
                 </div>
 
@@ -90,7 +97,10 @@ function Navbar() {
                     <Tab title="report" href="/" />
                     <Tab title="Summary" href="/summary" />
                     <Tab title="Introduction" href="/introduction" />
-                    <Tab title="Trends and Forecasts" href="/trend_and_forecast" />
+                    <Tab
+                        title="Trends and Forecasts"
+                        href="/trend_and_forecast"
+                    />
                     <Tab title="System Today " href="/system_today" />
                     <Tab title="System Tomorrow" href="/system_tomorrow" />
                     <Tab title="Funding " href="/funding" />

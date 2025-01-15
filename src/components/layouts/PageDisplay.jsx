@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 function PageDisplay({ children }) {
     return (
-        <div>
+        <div className="bg-bg">
             <ScrollProgress height="2" />
             <Navbar />
             <div className="pt-10 md:pt-[5.1rem] min-h-screen">

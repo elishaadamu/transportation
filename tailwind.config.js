@@ -4,11 +4,12 @@ export default {
     theme: {
         extend: {
             colors: {
-                text: "#b7b7b7",
+                text: "#f1f1f1",
                 bg: "black",
-                "primary-orange": "orange",
-                "primary-red": "cc5261",
-                "active-link": "#a30d33",
+                "primary-orange" : "#fdb913",
+                "primary-black" : "black",
+                "primary-red" :"#cc5262",
+                "active-link" : "#a30c33",
             },
         },
     },

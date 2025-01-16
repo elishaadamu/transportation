@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import SectionBackgroundImg from './SectionBackgroundImg';
+import SubSectionContent from '../layouts/SubSectionContenet';
 
-
-
-const SectionContent= ({ backgroundSrc, children }) => {
+const SectionContent = ({ backgroundSrc, subsections }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -33,8 +32,10 @@ const SectionContent= ({ backgroundSrc, children }) => {
   return (
     <section ref={sectionRef} className="relative flex items-center pb-[20rem] justify-center min-h-screen">
       <SectionBackgroundImg src={backgroundSrc} isVisible={isVisible} />
-      <div className="relative z-10 p-8 mx-4 bg-opacity-75 rounded-lg md:rounded-3xl shadow-lg max-w-[50rem] bg-bg">
-        {children}
+      <div className="relative z-10 max-w-[50rem]">
+        {subsections?.map((subsection, index) => (
+          <SubSectionContent key={index} content={subsection} />
+        ))}
       </div>
     </section>
   );

@@ -51,7 +51,7 @@ function Navbar() {
                         onClick={toggleMenu}
                     />
                     <p className="text-2xl truncate text-primary-orange">
-                        WEBSITE NAME
+                        Tri-Cities MPO PLAN2050
                     </p>
                 </div>
 
@@ -68,7 +68,7 @@ function Navbar() {
                     <Link to="/">
                         <FiLink />
                     </Link>
-                    
+
                     <img
                         src={logo2}
                         alt="logo"

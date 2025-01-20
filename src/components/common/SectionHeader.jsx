@@ -1,12 +1,12 @@
 import React from "react";
 
-function SubSectionHeader({ text }) {
+function SectionHeader({ children }) {
   return (
     <h2 className="mb-4 text-3xl font-bold text-center text-primary-orange">
-      {text}
+      {children}
     </h2>
   );
 }
 
-export default SubSectionHeader;
+export default SectionHeader;
 

@@ -1,16 +1,15 @@
 import React from "react";
-
-function Image({ src }) {
-  return (
-    <div className="mb-4">
-      <img
-        src={src}
-        className="object-cover w-full mx-auto"
-        alt="subsection image"
-      />
-    </div>
-  );
+import { img3 } from "../../assets";
+function Image({ className = "" }) {
+    return (
+        <div className="mb-4">
+            <img
+                src={img3}
+                className={`object-cover w-full mx-auto ${className}`}
+                alt="subsection image"
+            />
+        </div>
+    );
 }
 
 export default Image;
-

@@ -43,20 +43,20 @@ function Navbar() {
     };
 
     return (
-        <div className="pt-2 md:h-[5.5rem] fixed z-[500] top-0 left-0 bg-bg w-screen ">
+        <div className="pt-2 h-[3.6rem] md:h-[5.5rem] fixed z-[500] top-0 left-0 bg-bg w-screen ">
             <div className="flex items-center justify-between px-4">
                 <div className="flex items-center justify-between gap-2 ">
                     <FaBars
                         className="text-4xl cursor-pointer text-primary-orange md:hidden"
                         onClick={toggleMenu}
                     />
-                    <p className="text-2xl truncate text-primary-orange">
+                    <p className="truncate sm:text-2xl text-primary-orange">
                         Tri-Cities MPO PLAN2050
                     </p>
                 </div>
 
-                <div className="items-center justify-center hidden gap-1 mr-20 text-xl text-primary-red md:flex">
-                    <Link to="/" className="mx-3 text-sm text-center underline">
+                <div className="justify-center gap-1 mr-20 text-xl tems-center text-primary-red md:flex">
+                    {/* <Link to="/" className="mx-3 text-sm text-center underline">
                         View the 2020 attachment report
                     </Link>
                     <Link to="/">
@@ -67,22 +67,22 @@ function Navbar() {
                     </Link>
                     <Link to="/">
                         <FiLink />
+                    </Link> */}
+
+                    <Link to="/">
+                        <img
+                            src={logo2}
+                            alt="logo"
+                            className="w-[3rem] h-[2.5rem] object-cover    absolute right-8 top-2"
+                        />
                     </Link>
-
-                    <img
-                        src={logo2}
-                        alt="logo"
-                        className="w-[3rem] h-[2.5rem] object-cover hidden md:block  absolute right-8 top-2"
-                    />
                 </div>
-
-                <FaShareFromSquare className="text-3xl cursor-pointer text-primary-orange md:hidden" />
             </div>
 
             {/* Mobile menu Div */}
             <div
                 ref={menuRef}
-                className="h-0 md:h-[3.2rem] md:relative bottom-[.2rem] overflow-hidden bg-active-link md:bg-transparent transition-all"
+                className="h-0 md:h-[3.2rem] md:relative bottom-[.2rem] overflow-hidden bg-active-link md:bg-transparent transition-all md:-mt-[.08rem] mt-[.7rem]"
             >
                 <div className="flex items-center justify-between w-full px-4 py-8 md:hidden">
                     <Link to="/" className="mx-3 text-sm text-center underline">
@@ -104,6 +104,7 @@ function Navbar() {
                     <Tab title="System Today " href="/system_today" />
                     <Tab title="System Tomorrow" href="/system_tomorrow" />
                     <Tab title="Funding " href="/funding" />
+                    <Tab title="Appendices " href="/appendices" />
                 </div>
             </div>
         </div>

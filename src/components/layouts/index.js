@@ -1,8 +1,9 @@
 import Navbar from "./Navbar";
-// import SectionContent from "./SectionContent";
 import PageDisplay from "./PageDisplay";
 import PageHeader from "./PageHeader";
 import PageSection from "./PageSection";
-// import SubSectionContenet from "./SubSectionContenet";
+import SectionWrapper from "./SectionWrapper";
+import TableOfContent from "./TableOfContent";
 
-export { Navbar, PageDisplay, PageHeader, PageSection };
+
+export { Navbar, PageDisplay, PageHeader, PageSection, SectionWrapper,TableOfContent };

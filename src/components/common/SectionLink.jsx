@@ -6,7 +6,7 @@ function SectionLink({ link, title }) {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block underline transition-all text-primary-red hover:font-semibold"
+            className="inline underline transition-all text-primary-red hover:font-semibold"
         >
             {!title ? link : title}
         </a>

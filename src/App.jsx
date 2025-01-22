@@ -6,6 +6,7 @@ import TrendAndForcast from './pages/TrendAndForcasts'
 import SystemTomorrow from './pages/SystemTomorrow'
 import SystemToday from './pages/SystemToday'
 import Funding from './pages/Funding'
+import Appendices from "./pages/Appendices";
 
 export default function App() {
     return (
@@ -18,6 +19,7 @@ export default function App() {
                 <Route path="/system_today" element={<SystemToday />} />
                 <Route path="/system_tomorrow" element={<SystemTomorrow />} />
                 <Route path="/funding" element={<Funding />} />
+                <Route path="/appendices" element={<Appendices />} />
             </Routes>
         </Router>
     );

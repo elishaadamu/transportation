@@ -54,11 +54,11 @@ function SystemTomorrow() {
 
     return (
         <>
-            <PageHeader> Our System Tomorrow: 2050 </PageHeader>
+            <PageHeader img="https://images.unsplash.com/photo-1498374084266-8fbbbd6ac90b?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> Our System Tomorrow: 2050 </PageHeader>
             <PageDisplay>
                 <TableOfContent sections={sections} />
 
-                <SectionWrapper>
+                <SectionWrapper backgroundImage="https://plus.unsplash.com/premium_photo-1664304598312-6de674eb1b79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                     <PageSection id="section1">
                         <SectionHeader>Introduction</SectionHeader>
                         <Paragraph>

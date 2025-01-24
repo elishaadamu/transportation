@@ -6,12 +6,23 @@
     box-sizing: border-box;
 } */
 
-
-
 body {
-    @apply bg-bg text-text
+    @apply bg-bg text-text;
 }
 
 .ttt {
     height: 2px;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+    height: 5px !important; /* For horizontal scrollbar */
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary-red hover:bg-active-link; /* Adjust scrollbar thumb color */
+    border-radius: 1rem; /* Optional for rounded scrollbar */
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Optional for track */
 }

@@ -8,7 +8,8 @@ function SectionLink({ link, title }) {
             rel="noopener noreferrer"
             className="inline underline transition-all text-primary-red hover:font-semibold"
         >
-            {!title ? link : title}
+            {" "}
+            {!title ? link : title}{" "}
         </a>
     );
 }

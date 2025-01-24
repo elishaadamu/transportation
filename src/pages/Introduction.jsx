@@ -57,11 +57,11 @@ function Introduction() {
     ];
     return (
         <>
-            <PageHeader>INTRODUCTION </PageHeader>
+            <PageHeader img={"https://images.unsplash.com/photo-1617886322168-72b886573c35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}>INTRODUCTION </PageHeader>
             <PageDisplay>
                 <TableOfContent sections={sections} />
 
-                <SectionWrapper>
+                <SectionWrapper backgroundImage="https://images.unsplash.com/photo-1591866605101-67aa6d498cce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                     <PageSection id="section1">
                         <SectionHeader>Purpose of the Plan</SectionHeader>
                         <SubHeading>THE MADISON REGION IS GROWING</SubHeading>

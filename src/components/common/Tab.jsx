@@ -7,12 +7,11 @@ function Tab({ title, href }) {
             <NavLink
                 to={href}
                 className={({ isActive }) =>
-                    `md:text-sm capitalize text-text md:text-primary-black block py-1 w-full hover:font-semibold md:hover:bg-active-link md:hover:font-normal md:p-2 md:capitalize md:text-nowrap rounded-tl-md rounded-tr-md  ${
+                    `text-xs lg:text-sm capitalize text-text md:text-primary-black block py-1 w-full hover:font-semibold md:hover:bg-active-link md:hover:font-normal md:px-2.5 lg:px-3.5 md:py-1.5 md:capitalize md:text-nowrap rounded-tl-md rounded-tr-md transition-colors ${
                         isActive
                             ? " font-semibold md:font-normal  md:bg-active-link md:text-text"
                             : "md:bg-primary-red"
-                    }
-                        } `
+                    }`
                 }
             >
                 {title}

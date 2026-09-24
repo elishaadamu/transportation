@@ -1,66 +1,26 @@
 import React from "react";
-import { PageDisplay, PageSection } from "../components/layouts";
-import { List, SectionHeader, SectionLink } from "../components/common";
+import { PageDisplay, PageHeader } from "../components/layouts";
+
 function Appendices() {
     return (
         <>
+            <PageHeader>
+                Appendices
+            </PageHeader>
             <PageDisplay>
-                <PageSection>
-                    <SectionHeader> Appendices </SectionHeader>
-
-                    <List>
-                        <li>
-                            <SectionLink
-                                link="https://www.greatermadisonmpo.org/planning/documents/Appendix-A-ConnectRTP-web.pdf"
-                                title="Appendix A: Project and Policy recommendations"
-                            />
-                        </li>
-                        <li>
-                            <SectionLink
-                                link="https://www.greatermadisonmpo.org/planning/documents/appendixb_systemperformancereport.pdf"
-                                title={"Appendix B: System Performance Report"}
-                            />
-                        </li>
-                        <li>
-                            <SectionLink
-                                link="https://www.greatermadisonmpo.org/planning/documents/Appendix-C-RTP-EJ.pdf"
-                                title={
-                                    "Appendix C: Environmental Justice Analysis"
-                                }
-                            />
-                        </li>
-                        <li>
-                            <SectionLink
-                                link="https://www.greatermadisonmpo.org/planning/documents/Appendix-D-RTP-EnvironmentalAssessment.pdf"
-                                title={"Appendix D: Environmental Assessment"}
-                            />
-                        </li>
-                        <li>
-                            <SectionLink
-                                title={
-                                    "Appendix E: Public Participation and Response to Comments"
-                                }
-                                link="https://www.greatermadisonmpo.org/planning/documents/AppendixE_PIRevised.pdf"
-                            />
-                        </li>
-                        <li>
-                            <SectionLink
-                                title={
-                                    " Appendix F: Congestion Management Process"
-                                }
-                                link="https://www.greatermadisonmpo.org/planning/documents/Appendix-F-RTP-CMP.pdf"
-                            />
-                        </li>
-                        <li>
-                            <SectionLink
-                                title={
-                                    "Appendix G: Pedestrian Facilities Toolbox"
-                                }
-                                link="https://www.greatermadisonmpo.org/planning/documents/Appendix-G-RTP-PedFacilities.pdf"
-                            />
-                        </li>
-                    </List>
-                </PageSection>
+                <div className="flex flex-col items-center justify-center min-h-[50vh] px-4 py-16 text-center">
+                    <div className="p-8 md:p-14 max-w-xl w-full bg-bg/90 backdrop-blur-md rounded-2xl md:rounded-3xl border border-primary-orange/30 shadow-2xl">
+                        <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-primary-orange uppercase bg-primary-orange/10 rounded-full border border-primary-orange/20">
+                            Status Update
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-text mb-4">
+                            Coming Soon!
+                        </h2>
+                        <p className="text-base md:text-lg text-text/80 leading-relaxed">
+                            The Tri-Cities MPO PLAN2050 Appendices documentation and reports are currently being compiled. Please check back soon.
+                        </p>
+                    </div>
+                </div>
             </PageDisplay>
         </>
     );

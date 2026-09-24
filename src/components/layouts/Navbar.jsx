@@ -6,7 +6,7 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { FiLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { Tab } from "../common";
-import { logo2 } from "../../assets";
+import { mpoLogo } from "../../assets";
 
 function Navbar() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -71,9 +71,9 @@ function Navbar() {
 
                     <Link to="/">
                         <img
-                            src={logo2}
-                            alt="logo"
-                            className="w-[3rem] h-[2.5rem] object-cover    absolute right-8 top-2"
+                            src={mpoLogo}
+                            alt="Tri-Cities MPO logo"
+                            className="w-[4.2rem] md:w-[4.8rem] h-[2.2rem] md:h-[2.5rem] object-contain rounded bg-white/10 p-0.5 absolute right-4 md:right-8 top-1.5 md:top-2 hover:opacity-90 transition-opacity"
                         />
                     </Link>
                 </div>
@@ -82,23 +82,23 @@ function Navbar() {
             {/* Mobile menu Div */}
             <div
                 ref={menuRef}
-                className="h-0 md:h-[3.2rem] md:relative bottom-[.2rem] overflow-hidden bg-active-link md:bg-transparent transition-all md:-mt-[.08rem] mt-[.7rem]"
+                className="h-0 md:h-[3.4rem] md:relative bottom-[.2rem] overflow-hidden md:overflow-x-auto thin-scrollbar bg-active-link md:bg-transparent transition-all md:-mt-[.08rem] mt-[.7rem]"
             >
                 <div className="flex items-center justify-between w-full px-4 py-8 md:hidden">
                     <Link to="/" className="mx-3 text-sm text-center underline">
                         View the 2020 attachment report
                     </Link>
-                    <Link to="/" className="w-[12rem]  aspect-square">
-                        <img src={logo2} alt="logo" />
+                    <Link to="/" className="w-[8rem] h-auto">
+                        <img src={mpoLogo} alt="Tri-Cities MPO logo" className="w-full h-auto object-contain rounded bg-white/10 p-1" />
                     </Link>
                 </div>
 
-                <div className="items-center gap-2 px-4 md:flex md:justify-center md:mt-4">
+                <div className="items-center gap-1.5 lg:gap-2 px-4 md:flex md:justify-center md:mt-3 md:min-w-max pb-1">
                     <Tab title="report" href="/" />
                     <Tab title="Summary" href="/summary" />
                     <Tab title="Introduction" href="/introduction" />
                     <Tab
-                        title="Trends and Forecasts"
+                        title="National and Regional Trends and Forecasts"
                         href="/trend_and_forecast"
                     />
                     <Tab title="System Today " href="/system_today" />

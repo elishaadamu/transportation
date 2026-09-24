@@ -1,35 +1,32 @@
 import React from "react";
 import { PageDisplay } from "../components/layouts";
-import { home } from "../assets";
+import { plan2050Cover } from "../assets";
 
 function Home() {
     return (
         <PageDisplay>
-            <div className="grid h-[90vh] place-content-center  md:relative">
-                <div className="hidden md:block md:absolute w-[19rem] bg-active-link left-0 top-0 p-4 rounded-br-3xl ">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta culpa qui optio beatae enim eligendi unde fugit labore aliquam. Nihil architecto blanditiis nostrum illum. Quidem suscipit eos tempore perspiciatis, ipsa soluta mollitia, esse explicabo deserunt itaque placeat voluptatem eum rem culpa. Porro  lauentore. Consequuntur laborum nihil aliquam necessitatibus similique? Fuga magnam voluptatem excepturi necessitatibus nobis explicabo, id quam eum nulla!
+            <div className="grid min-h-[90vh] place-content-center p-4 md:p-8 md:relative">
+                <div className="hidden md:block md:absolute w-[22rem] lg:w-[24rem] bg-active-link left-2 lg:left-6 top-6 p-6 rounded-br-3xl shadow-2xl z-10 border-r-2 border-b-2 border-primary-orange/30">
+                    <p className="text-sm lg:text-[15px] leading-relaxed text-text font-normal">
+                        Each Metropolitan Planning Organization (MPO) must prepare and adopt a long-range transportation plan (PLAN2050) in accordance with federal regulations. The plan aim at creating a coordinated, multimodal transportation system that addresses the needs and objectives of the MPO, state, and transit providers. It must consider transit, highways, bicycle and pedestrian facilities, accessibility, and freight; accommodate current and future travel demand; and support economic development, transportation, land use, and sustainability goals over a minimum 20-year planning horizon while remaining fiscally constrained.
                     </p>
-                    <div className="w-full h-[10rem] bg-bg mb-4">
-                        
-                    </div>
                 </div>
 
-                <div className="w-full md:w-[65rem] ">
-                    <img src={home} alt="img" />
+                <div className="w-full md:w-[65rem] lg:w-[75rem] mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10">
+                    <img
+                        src={plan2050Cover}
+                        alt="PLAN2050 Cover and Goals"
+                        className="w-full h-auto object-contain"
+                    />
+                </div>
+
+                {/* Mobile version of the description */}
+                <div className="block md:hidden mt-6 bg-active-link p-5 rounded-2xl shadow-xl border border-primary-orange/30">
+                    <p className="text-sm leading-relaxed text-text">
+                        Each Metropolitan Planning Organization (MPO) must prepare and adopt a long-range transportation plan (PLAN2050) in accordance with federal regulations. The plan aim at creating a coordinated, multimodal transportation system that addresses the needs and objectives of the MPO, state, and transit providers. It must consider transit, highways, bicycle and pedestrian facilities, accessibility, and freight; accommodate current and future travel demand; and support economic development, transportation, land use, and sustainability goals over a minimum 20-year planning horizon while remaining fiscally constrained.
+                    </p>
                 </div>
             </div>
-
-            {/* <SectionContent backgroundSrc="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-                <div>
-                    <h2 className="mb-4 text-4xl font-bold text-blue-800">
-                        section 1
-                    </h2>
-                    <p className="text-lg text-gray-700">
-                        Lorem ipsum dolor sit amet, consect{" "}
-                    </p>
-                </div>
-            </SectionContent> */}
         </PageDisplay>
     );
 }

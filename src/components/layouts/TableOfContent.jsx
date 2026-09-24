@@ -1,62 +1,63 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-function TableOfContent({ sections }) {
+function TableOfContent({ sections, title = "TABLE OF CONTENTS" }) {
     return (
-        <div className=" px-2 sticky overflow-x-auto top-[-2.5rem] md:top-[-.3rem] z-[100] thin-scrollbar select-none bg-bg">
-            <h2 className="my-8 text-3xl font-bold text-center text-primary-orange">
-                TABLE OF CONTENT
-            </h2>
-            <ul className="flex items-center gap-4 mb-3">
-                {sections.map((section) => (
-                    <li
-                        key={section.to}
-                        className="max-w-[10rem]  min-w-[8rem] bg-primary-red hover:bg-active-link hover:text-text overflow-hidden truncate py-2 px-4 rounded-3xl text-xs text-bg text-center"
-                    >
+        <>
+            {/* Desktop Left Tabs Sidebar */}
+            <aside className="hidden md:flex flex-col md:sticky top-[6.5rem] w-72 lg:w-80 shrink-0 max-h-[calc(100vh-7.5rem)] bg-bg/90 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl p-4 overflow-hidden z-30">
+                <div className="pb-3 mb-3 border-b border-white/10 flex items-center justify-between">
+                    <span className="text-xs uppercase tracking-wider text-primary-orange font-bold">
+                        {title}
+                    </span>
+                    <span className="text-[11px] text-text/50 font-medium">
+                        {sections.length} tabs
+                    </span>
+                </div>
+                <nav className="flex flex-col gap-1.5 overflow-y-auto thin-scrollbar pr-1">
+                    {sections.map((section, idx) => (
                         <Link
-                            className=" font-[500]  cursor-pointer mt-5 "
+                            key={section.to}
                             to={section.to}
-                            offset={-110}
+                            spy={true}
                             smooth={true}
-                            duration={500}
+                            offset={-100}
+                            duration={400}
+                            activeClass="!bg-active-link !text-white font-semibold shadow-md border-l-4 border-primary-orange pl-3.5"
+                            className="group flex items-center gap-2.5 py-2.5 px-3 rounded-lg text-xs lg:text-sm text-text/75 hover:text-white hover:bg-white/10 transition-all cursor-pointer text-left"
                         >
-                            {section.title}
+                            <span className="shrink-0 w-5 h-5 rounded-full bg-white/10 group-hover:bg-primary-orange/20 text-primary-orange text-[10px] font-bold flex items-center justify-center">
+                                {idx + 1}
+                            </span>
+                            <span className="truncate leading-tight">
+                                {section.title}
+                            </span>
                         </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
+                    ))}
+                </nav>
+            </aside>
+
+            {/* Mobile Horizontal Tabs */}
+            <div className="md:hidden sticky top-[3.6rem] z-40 bg-bg/95 backdrop-blur-md py-2.5 px-3 border-b border-white/10 overflow-x-auto thin-scrollbar w-full shadow-lg">
+                <div className="flex items-center gap-2 w-max">
+                    {sections.map((section, idx) => (
+                        <Link
+                            key={section.to}
+                            to={section.to}
+                            spy={true}
+                            smooth={true}
+                            offset={-80}
+                            duration={400}
+                            activeClass="!bg-active-link !text-white font-semibold ring-2 ring-primary-orange"
+                            className="whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium bg-primary-red/80 text-white shrink-0 hover:bg-active-link transition-colors cursor-pointer"
+                        >
+                            {idx + 1}. {section.title}
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </>
     );
 }
 
 export default TableOfContent;
-
-// import React from "react";
-// import { Link } from "react-scroll";
-
-// function TableOfContent({ sections }) {
-//     return (
-//         <div className=" my-[8rem] md:overflow-y-auto h-fit md:h-[85vh]  md:sticky top-[8rem] md:w-[35rem] px-10">
-//             <h2 className="text-3xl font-bold text-center md:text-2xl text-primary-orange">
-//                 TABLE OF CONTENT
-//             </h2>
-//             <ul className=" text-primary-red">
-//                 {sections.map((section) => (
-//                     <li key={section.to} className="mt-4 truncate">
-//                         <Link
-//                             className=" font-[500]  cursor-pointer mt-5 hover:text-text underline "
-//                             to={section.to}
-//                             offset={-110}
-//                             smooth={true}
-//                             duration={500}
-//                         >
-//                             {section.title}
-//                         </Link>
-//                     </li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// }
-
-// export default TableOfContent;

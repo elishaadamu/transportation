@@ -95,7 +95,6 @@ function Navbar() {
 
                 <div className="items-center gap-1.5 lg:gap-2 px-4 md:flex md:justify-center md:mt-3 md:min-w-max pb-1">
                     <Tab title="report" href="/" />
-                    <Tab title="Summary" href="/summary" />
                     <Tab title="Introduction" href="/introduction" />
                     <Tab
                         title="National and Regional Trends and Forecasts"

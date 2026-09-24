@@ -2,27 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-    box-sizing: border-box;
-} */
-
 body {
-    @apply bg-bg text-text;
-}
-
-.ttt {
-    height: 2px;
+    @apply bg-white text-slate-800 antialiased;
 }
 
 .thin-scrollbar::-webkit-scrollbar {
-    height: 5px !important; /* For horizontal scrollbar */
+    width: 6px;
+    height: 6px !important;
 }
 
 .thin-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-primary-red hover:bg-active-link; /* Adjust scrollbar thumb color */
-    border-radius: 1rem; /* Optional for rounded scrollbar */
+    @apply bg-slate-300 hover:bg-slate-400;
+    border-radius: 1rem;
 }
 
 .thin-scrollbar::-webkit-scrollbar-track {
-    background-color: transparent; /* Optional for track */
+    background-color: transparent;
 }

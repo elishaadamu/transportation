@@ -4,10 +4,10 @@ import Navbar from "./Navbar";
 
 function PageDisplay({ children }) {
     return (
-        <div className="bg-bg">
-            <ScrollProgress height="2" />
+        <div className="bg-white min-h-screen text-slate-800 flex flex-col">
+            <ScrollProgress height="3" bgcolor="#1d4ed8" />
             <Navbar />
-            <div className="pt-10 md:pt-[5.1rem] min-h-screen ">
+            <div className="pt-[3.6rem] md:pt-[5.5rem] flex-1 flex flex-col">
                 {children}
             </div>
         </div>

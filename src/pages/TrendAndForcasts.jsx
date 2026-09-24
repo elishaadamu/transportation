@@ -62,15 +62,17 @@ function TrendAndForcasts() {
     ];
 
     return (
-        <>
-            <PageHeader img="https://plus.unsplash.com/premium_photo-1673971700988-346588461fa7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <PageDisplay>
+            <PageHeader
+                img="https://plus.unsplash.com/premium_photo-1673971700988-346588461fa7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                subtitle="Chapter 2"
+            >
                 Chapter 2: National and Regional Trends and Forecasts
             </PageHeader>
-            <PageDisplay>
-                <SectionWrapper backgroundImage="https://images.unsplash.com/photo-1541348263662-e068662d82af?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-                    <div className="flex flex-col md:flex-row items-start justify-center gap-8 max-w-[94rem] mx-auto px-4 sm:px-6 py-6 relative">
-                        {/* Left Tabs Sidebar */}
-                        <TableOfContent sections={sections} title="Chapter 2 Tabs" />
+            <SectionWrapper>
+                <div className="flex flex-col md:flex-row items-start justify-center gap-8 max-w-[94rem] mx-auto px-4 sm:px-6 py-8 relative">
+                    {/* Left Tabs Sidebar */}
+                    <TableOfContent sections={sections} title="Chapter 2 Tabs" />
 
                         {/* Content Area */}
                         <main className="flex-1 min-w-0 w-full flex flex-col items-center">
@@ -99,10 +101,10 @@ function TrendAndForcasts() {
 
                                 <div className="space-y-8 mt-6">
                                     {/* Population Density */}
-                                    <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
-                                        <div className="p-4 bg-white/5 border-b border-white/10">
+                                    <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+                                        <div className="p-4 bg-slate-50 border-b border-slate-200">
                                             <SubHeading>Population Density</SubHeading>
-                                            <Paragraph className="!text-sm text-text/80">
+                                            <Paragraph className="!text-sm text-slate-700">
                                                 Figure 3 shows population density (residents per square mile) across the region. Population density is highest in Petersburg, Colonial Heights, and Hopewell, with additional concentrations in Chesterfield, Dinwiddie, and Prince George Counties, particularly along the I-95 and I-85 corridors and near major institutions such as Virginia State University (VSU) and Fort Lee. Notable exceptions to this pattern exist within eastern Hopewell and southwestern Petersburg, where lower population densities are due to industrial, commercial, and park land uses rather than rural or undeveloped land.
                                             </Paragraph>
                                         </div>
@@ -111,16 +113,16 @@ function TrendAndForcasts() {
                                             alt="TCAMPO Population Density by Block Group"
                                             className="w-full h-auto object-cover max-h-[32rem]"
                                         />
-                                        <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                        <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                             Figure 3. TCAMPO Population Density by Block Group (Source: 2023 ACS 5-Year)
                                         </p>
                                     </div>
 
                                     {/* Employment Density */}
-                                    <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
-                                        <div className="p-4 bg-white/5 border-b border-white/10">
+                                    <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+                                        <div className="p-4 bg-slate-50 border-b border-slate-200">
                                             <SubHeading>Employment Density</SubHeading>
-                                            <Paragraph className="!text-sm text-text/80">
+                                            <Paragraph className="!text-sm text-slate-700">
                                                 Figure 4 illustrates the region’s employment density (jobs per square mile). Employment is primarily concentrated along the I-95 and I-85 corridors through Dinwiddie, Colonial Heights, and Petersburg, with additional dense clusters just north of the TCAMPO boundary in Chester and Meadowville. Other areas of high employment density are evident in the historic downtown cores of Petersburg and Hopewell, near VSU in Ettrick, at Southpark Mall in Colonial Heights, and along arterial principal arterial corridors such as South Crater Road (US-301), Oaklawn Boulevard (VA-36), and East Hundred Road (SR-10). Rural portions of the region, particularly to the west, south, and east, show minimal employment density. Due to limitations in federal jobs reporting within the LEHD dataset, employment associated with Fort Lee is not captured in this map.
                                             </Paragraph>
                                         </div>
@@ -129,16 +131,16 @@ function TrendAndForcasts() {
                                             alt="TCAMPO Employment Density by Block Group"
                                             className="w-full h-auto object-cover max-h-[32rem]"
                                         />
-                                        <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                        <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                             Figure 4. TCAMPO Employment Density by Block Group (Source: 2023 LEHD)
                                         </p>
                                     </div>
 
                                     {/* Activity Density */}
-                                    <div className="rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
-                                        <div className="p-4 bg-white/5 border-b border-white/10">
+                                    <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+                                        <div className="p-4 bg-slate-50 border-b border-slate-200">
                                             <SubHeading>Activity Density</SubHeading>
-                                            <Paragraph className="!text-sm text-text/80">
+                                            <Paragraph className="!text-sm text-slate-700">
                                                 Figure 5 combines the two measures above to show activity density (residents plus jobs per square mile) across the region. Activity density is highest where population and employment concentrations overlap, most notably in Colonial Heights, Hopewell, and Petersburg and along the I-95 and I-85 corridors. High activity is also illustrated near VSU and Fort Lee. As with population and employment densities individually, activity density is lowest in the rural portions of the region to the west, south, and east.
                                             </Paragraph>
                                         </div>
@@ -147,7 +149,7 @@ function TrendAndForcasts() {
                                             alt="TCAMPO Activity Density by Block Group"
                                             className="w-full h-auto object-cover max-h-[32rem]"
                                         />
-                                        <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                        <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                             Figure 5. TCAMPO Activity Density by Block Group (Source: 2023 ACS 5-Year, 2023 LEHD)
                                         </p>
                                     </div>
@@ -166,12 +168,12 @@ function TrendAndForcasts() {
                                 </Paragraph>
 
                                 <div className="space-y-4 mt-6">
-                                    <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+                                    <div className="p-5 rounded-xl bg-slate-50 border border-slate-200">
                                         <SubHeading>Population Growth (1990–2020)</SubHeading>
                                         <Paragraph className="!text-sm">
                                             The population of the Tri-Cities region grew steadily between 1990 and 2020, increasing by <strong>24.4 percent</strong> from 134,954 to 167,920. Over the same period, population growth in Virginia (39.5 percent) and the United States (33.3 percent) outpaced the region. The largest regional population growth has occurred in counties dominated by suburban and rural areas:
                                         </Paragraph>
-                                        <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-text/80">
+                                        <ul className="list-disc pl-5 mt-2 space-y-1 text-sm text-slate-700">
                                             <li><strong>Chesterfield (TCAMPO portion):</strong> grew by 69.3% between 1990 and 2020.</li>
                                             <li><strong>Dinwiddie (TCAMPO portion):</strong> grew by 58.3%, though growth slowed after 2010.</li>
                                             <li><strong>Prince George (TCAMPO portion):</strong> grew by ~56%, with its largest surge occurring between 2010 and 2020.</li>
@@ -181,14 +183,14 @@ function TrendAndForcasts() {
                                         </ul>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+                                    <div className="p-5 rounded-xl bg-slate-50 border border-slate-200">
                                         <SubHeading>Household Growth and Size</SubHeading>
                                         <Paragraph className="!text-sm">
                                             The number of households in the region grew by <strong>28.4 percent</strong> between 1990 and 2020, increasing from 48,586 to 62,362. Chesterfield experienced the highest household growth (74.2%), followed by Dinwiddie (61.1%) and Prince George (46.9%). Colonial Heights grew by 20.0%, Hopewell by 4.2%, and Petersburg by 4.4%. Across all jurisdictions, average household size declined by 3.1% from 2.8 to 2.7 people per household, tracking broader trends toward smaller households across the Commonwealth (-3.7%) and nation (-3.4%).
                                         </Paragraph>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+                                    <div className="p-5 rounded-xl bg-slate-50 border border-slate-200">
                                         <SubHeading>Employment Growth</SubHeading>
                                         <Paragraph className="!text-sm">
                                             Employment in the Tri-Cities region increased by approximately <strong>47.3 percent</strong>, expanding from 37,198 in 1990 to 54,780 in 2020. In contrast with population and households, regional employment is growing at a faster rate than both the Commonwealth of Virginia (32.3%) and the nation (28.1%).
@@ -209,17 +211,17 @@ function TrendAndForcasts() {
                                 </Paragraph>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-4">
-                                    <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                                        <h4 className="text-primary-orange font-bold text-sm">National Growth (NGC)</h4>
-                                        <p className="text-xs text-text/80 mt-1">Measures growth attributable to overall national employment trends.</p>
+                                    <div className="p-4 bg-blue-50/80 rounded-xl border border-blue-200 shadow-sm text-slate-800">
+                                        <h4 className="text-blue-950 font-bold text-sm">National Growth (NGC)</h4>
+                                        <p className="text-xs text-slate-600 mt-1">Measures growth attributable to overall national employment trends.</p>
                                     </div>
-                                    <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                                        <h4 className="text-primary-orange font-bold text-sm">Industrial Mix (IMC)</h4>
-                                        <p className="text-xs text-text/80 mt-1">Reflects industry-specific national growth patterns.</p>
+                                    <div className="p-4 bg-blue-50/80 rounded-xl border border-blue-200 shadow-sm text-slate-800">
+                                        <h4 className="text-blue-950 font-bold text-sm">Industrial Mix (IMC)</h4>
+                                        <p className="text-xs text-slate-600 mt-1">Reflects industry-specific national growth patterns.</p>
                                     </div>
-                                    <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                                        <h4 className="text-primary-orange font-bold text-sm">Local Share (LSC)</h4>
-                                        <p className="text-xs text-text/80 mt-1">Captures competitive growth unique to the Tri-Cities region.</p>
+                                    <div className="p-4 bg-blue-50/80 rounded-xl border border-blue-200 shadow-sm text-slate-800">
+                                        <h4 className="text-blue-950 font-bold text-sm">Local Share (LSC)</h4>
+                                        <p className="text-xs text-slate-600 mt-1">Captures competitive growth unique to the Tri-Cities region.</p>
                                     </div>
                                 </div>
 
@@ -227,13 +229,13 @@ function TrendAndForcasts() {
                                     The analysis revealed that <strong>Trade, Transportation & Utilities</strong> was the region's largest source of net employment growth between 2019 and 2023, adding 950 jobs (NGC: +585, IMC: +158, LSC: +208). The strong positive local growth in both Trade, Transportation & Utilities and Manufacturing aligns with the region's location along the I-95 and I-85 corridors and its growing role as a goods movement and freight logistics hub.
                                 </Paragraph>
 
-                                <div className="my-6 rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
+                                <div className="my-6 rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                                     <img
                                         src={docImg5}
                                         alt="TCAMPO Shift-Share by Supersector vs. National, 2019-2023"
                                         className="w-full h-auto object-contain max-h-[30rem]"
                                     />
-                                    <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                    <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                         Figure 12. TCAMPO Shift-Share by Supersector vs. National, 2019-2023
                                     </p>
                                 </div>
@@ -250,13 +252,13 @@ function TrendAndForcasts() {
                                     For this analysis, six EJ indicators are derived from 2023 ACS 5-Year Estimates: minority and low-income populations, persons with limited English proficiency, persons with disabilities, elderly persons, and households without access to a vehicle. Each indicator is reclassified into an ordinal vulnerability score (1–3) using tertile breaks. The scores are summed to produce a composite vulnerability index (ranging from 6 to 18), then classified into a final three-level Environmental Justice Composite Index.
                                 </Paragraph>
 
-                                <div className="my-6 rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
+                                <div className="my-6 rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                                     <img
                                         src={docImg6}
                                         alt="Composite EJ Index by Block Group"
                                         className="w-full h-auto object-cover max-h-[34rem]"
                                     />
-                                    <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                    <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                         Figure 13. Composite EJ Index by Block Group (Source: 2023 ACS 5-Year Estimates)
                                     </p>
                                 </div>
@@ -270,33 +272,33 @@ function TrendAndForcasts() {
                                 </Paragraph>
 
                                 {/* Table 1 */}
-                                <div className="my-6 overflow-x-auto thin-scrollbar rounded-xl border border-white/15 bg-black/40 shadow-xl">
-                                    <div className="p-3 bg-white/5 border-b border-white/10 text-xs font-semibold uppercase tracking-wider text-primary-orange">
+                                <div className="my-6 overflow-x-auto thin-scrollbar rounded-xl border border-slate-200 bg-white shadow-sm">
+                                    <div className="p-3 bg-slate-100 border-b border-slate-200 text-xs font-bold uppercase tracking-wider text-blue-950">
                                         Table 1. 2017–2050 Socioeconomic Forecasts
                                     </div>
-                                    <table className="w-full text-left text-xs sm:text-sm text-text border-collapse">
+                                    <table className="w-full text-left text-xs sm:text-sm text-slate-800 border-collapse">
                                         <thead>
-                                            <tr className="bg-blue-900/40 border-b border-white/15 text-text">
-                                                <th className="py-2.5 px-3 font-semibold">Jurisdiction</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Population 2017</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Population 2050</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Households 2017</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Households 2050</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Employment 2017</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Employment 2050</th>
+                                            <tr className="bg-slate-50 border-b-2 border-slate-200 text-blue-950">
+                                                <th className="py-2.5 px-3 font-bold">Jurisdiction</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Population 2017</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Population 2050</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Households 2017</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Households 2050</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Employment 2017</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Employment 2050</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="divide-y divide-white/5">
-                                            <tr className="hover:bg-white/5">
+                                        <tbody className="divide-y divide-slate-100">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Chesterfield</td>
                                                 <td className="py-2 px-3 text-right">43,683</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">61,806</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">61,806</td>
                                                 <td className="py-2 px-3 text-right">14,909</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">21,403</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">21,403</td>
                                                 <td className="py-2 px-3 text-right">10,384</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">16,645</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">16,645</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Dinwiddie</td>
                                                 <td className="py-2 px-3 text-right">28,504</td>
                                                 <td className="py-2 px-3 text-right">30,477</td>
@@ -305,16 +307,16 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">8,647</td>
                                                 <td className="py-2 px-3 text-right">10,438</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Prince George</td>
                                                 <td className="py-2 px-3 text-right">45,881</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">60,888</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">60,888</td>
                                                 <td className="py-2 px-3 text-right">12,543</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">23,640</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">23,640</td>
                                                 <td className="py-2 px-3 text-right">13,790</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">19,422</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">19,422</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Colonial Heights</td>
                                                 <td className="py-2 px-3 text-right">17,395</td>
                                                 <td className="py-2 px-3 text-right">19,646</td>
@@ -323,7 +325,7 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">9,344</td>
                                                 <td className="py-2 px-3 text-right">9,344</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Hopewell</td>
                                                 <td className="py-2 px-3 text-right">22,941</td>
                                                 <td className="py-2 px-3 text-right">23,471</td>
@@ -332,7 +334,7 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">7,137</td>
                                                 <td className="py-2 px-3 text-right">7,366</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Petersburg</td>
                                                 <td className="py-2 px-3 text-right">32,918</td>
                                                 <td className="py-2 px-3 text-right">33,280</td>
@@ -341,26 +343,26 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">13,130</td>
                                                 <td className="py-2 px-3 text-right">13,540</td>
                                             </tr>
-                                            <tr className="bg-white/10 font-bold border-t border-white/20 text-white">
+                                            <tr className="bg-slate-100 font-bold border-t-2 border-slate-300 text-blue-950">
                                                 <td className="py-2.5 px-3">TCAMPO Total</td>
                                                 <td className="py-2.5 px-3 text-right">191,322</td>
-                                                <td className="py-2.5 px-3 text-right text-primary-orange">229,568</td>
+                                                <td className="py-2.5 px-3 text-right font-extrabold text-blue-900">229,568</td>
                                                 <td className="py-2.5 px-3 text-right">64,404</td>
-                                                <td className="py-2.5 px-3 text-right text-primary-orange">84,277</td>
+                                                <td className="py-2.5 px-3 text-right font-extrabold text-blue-900">84,277</td>
                                                 <td className="py-2.5 px-3 text-right">62,432</td>
-                                                <td className="py-2.5 px-3 text-right text-primary-orange">76,755</td>
+                                                <td className="py-2.5 px-3 text-right font-extrabold text-blue-900">76,755</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
 
-                                <div className="my-6 rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
+                                <div className="my-6 rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                                     <img
                                         src={docImg7}
                                         alt="Employment Change per Acre by TAZ, 2017-2050"
                                         className="w-full h-auto object-cover max-h-[34rem]"
                                     />
-                                    <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                    <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                         Figure 14. Employment Change per Acre by Traffic Analysis Zone (TAZ), 2017–2050
                                     </p>
                                 </div>
@@ -377,13 +379,13 @@ function TrendAndForcasts() {
                                     The urban core jurisdictions—Colonial Heights, Hopewell, and Petersburg—each have more than 60 percent of total land developed, while Dinwiddie, Prince George, and Chesterfield each have less than 30 percent developed. Across the Tri-Cities MPO as a whole, about 28 percent of land is developed, presenting a region defined by a densely developed core surrounded by lower-density, largely undeveloped areas.
                                 </Paragraph>
 
-                                <div className="my-6 rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
+                                <div className="my-6 rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                                     <img
                                         src={docImg8}
                                         alt="Existing Land Cover and Transitions, 2014-2024"
                                         className="w-full h-auto object-cover max-h-[34rem]"
                                     />
-                                    <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                    <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                         Figure 15. Existing Land Cover and Transitions from Undeveloped to Developed Areas, 2014–2024 (Source: USGS NLCD)
                                     </p>
                                 </div>
@@ -400,7 +402,7 @@ function TrendAndForcasts() {
                                     Population and employment changes shape both development and travel patterns throughout the region. Understanding these existing patterns provides a basis for developing future transportation needs. Examining trip flows, household vehicle availability, mode share, and forecasted travel demand helps inform decision makers about the investments that are needed to support economic vitality, improve mobility, and enhance quality of life for residents and visitors alike.
                                 </Paragraph>
 
-                                <div className="p-3 my-4 bg-white/5 rounded-lg border border-dashed border-white/20 text-xs text-text/60 italic">
+                                <div className="p-4 my-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 italic">
                                     Trips by Mode — Content under development (TBD)
                                 </div>
 
@@ -410,23 +412,23 @@ function TrendAndForcasts() {
                                 </Paragraph>
 
                                 {/* Table 2 */}
-                                <div className="my-6 overflow-x-auto thin-scrollbar rounded-xl border border-white/15 bg-black/40 shadow-xl">
-                                    <div className="p-3 bg-white/5 border-b border-white/10 text-xs font-semibold uppercase tracking-wider text-primary-orange">
+                                <div className="my-6 overflow-x-auto thin-scrollbar rounded-xl border border-slate-200 bg-white shadow-sm">
+                                    <div className="p-3 bg-slate-100 border-b border-slate-200 text-xs font-bold uppercase tracking-wider text-blue-950">
                                         Table 2. Household Vehicle Availability by Jurisdiction (Source: 2024 ACS 5-Year)
                                     </div>
-                                    <table className="w-full text-left text-xs sm:text-sm text-text border-collapse">
+                                    <table className="w-full text-left text-xs sm:text-sm text-slate-800 border-collapse">
                                         <thead>
-                                            <tr className="bg-blue-900/40 border-b border-white/15 text-text">
-                                                <th className="py-2.5 px-3 font-semibold">Jurisdiction</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Households</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">No Vehicle</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">1 Vehicle</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">2 Vehicles</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">3+ Vehicles</th>
+                                            <tr className="bg-slate-50 border-b-2 border-slate-200 text-blue-950">
+                                                <th className="py-2.5 px-3 font-bold">Jurisdiction</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Households</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">No Vehicle</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">1 Vehicle</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">2 Vehicles</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">3+ Vehicles</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="divide-y divide-white/5">
-                                            <tr className="hover:bg-white/5">
+                                        <tbody className="divide-y divide-slate-100">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Chesterfield</td>
                                                 <td className="py-2 px-3 text-right">16,017</td>
                                                 <td className="py-2 px-3 text-right">4.22%</td>
@@ -434,15 +436,15 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">40.93%</td>
                                                 <td className="py-2 px-3 text-right">32.63%</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Dinwiddie</td>
                                                 <td className="py-2 px-3 text-right">4,409</td>
                                                 <td className="py-2 px-3 text-right">5.90%</td>
                                                 <td className="py-2 px-3 text-right">19.37%</td>
                                                 <td className="py-2 px-3 text-right">28.42%</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">46.34%</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">46.34%</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Prince George</td>
                                                 <td className="py-2 px-3 text-right">10,204</td>
                                                 <td className="py-2 px-3 text-right">3.47%</td>
@@ -450,7 +452,7 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">34.08%</td>
                                                 <td className="py-2 px-3 text-right">39.50%</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Colonial Heights</td>
                                                 <td className="py-2 px-3 text-right">7,530</td>
                                                 <td className="py-2 px-3 text-right">6.79%</td>
@@ -458,31 +460,31 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">35.96%</td>
                                                 <td className="py-2 px-3 text-right">23.52%</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Hopewell</td>
                                                 <td className="py-2 px-3 text-right">9,255</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">11.66%</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-900">11.66%</td>
                                                 <td className="py-2 px-3 text-right">35.73%</td>
                                                 <td className="py-2 px-3 text-right">26.12%</td>
                                                 <td className="py-2 px-3 text-right">26.49%</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Petersburg</td>
                                                 <td className="py-2 px-3 text-right">15,138</td>
-                                                <td className="py-2 px-3 text-right font-bold text-blue-400">14.84%</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-orange">48.43%</td>
+                                                <td className="py-2 px-3 text-right font-extrabold text-blue-900">14.84%</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-800">48.43%</td>
                                                 <td className="py-2 px-3 text-right">25.84%</td>
                                                 <td className="py-2 px-3 text-right">10.89%</td>
                                             </tr>
-                                            <tr className="bg-white/10 font-bold border-t border-white/20 text-white">
+                                            <tr className="bg-slate-100 font-bold border-t-2 border-slate-300 text-blue-950">
                                                 <td className="py-2.5 px-3">TCAMPO Region</td>
                                                 <td className="py-2.5 px-3 text-right">62,553</td>
-                                                <td className="py-2.5 px-3 text-right text-blue-400">8.20%</td>
+                                                <td className="py-2.5 px-3 text-right font-bold text-blue-900">8.20%</td>
                                                 <td className="py-2.5 px-3 text-right">31.87%</td>
                                                 <td className="py-2.5 px-3 text-right">32.49%</td>
                                                 <td className="py-2.5 px-3 text-right">27.45%</td>
                                             </tr>
-                                            <tr className="text-text/70 italic text-xs bg-black/40">
+                                            <tr className="text-slate-600 italic text-xs bg-slate-50">
                                                 <td className="py-2 px-3">Virginia Statewide</td>
                                                 <td className="py-2 px-3 text-right">3,365,732</td>
                                                 <td className="py-2 px-3 text-right">6.10%</td>
@@ -499,7 +501,7 @@ function TrendAndForcasts() {
                                     The majority of workers 16 years and over who did not work from home drove alone to work across all commute durations, accounting for <strong>82%</strong> of all commuters and more than 85% of commuters in travel times between 15 minutes to one hour. Walking was most prevalent among the shortest commutes, comprising nearly 24 percent of workers with travel times under 10 minutes. Carpooling accounted for 7 to 11 percent across all time intervals. Transit use was minimal overall but reached about 10 percent of workers with travel times of 60 minutes or more.
                                 </Paragraph>
 
-                                <div className="p-3 my-4 bg-white/5 rounded-lg border border-dashed border-white/20 text-xs text-text/60 italic">
+                                <div className="p-4 my-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 italic">
                                     Changes in Traffic Congestion (2020–2025) — Content under development (TBD)
                                 </div>
                             </PageSection>
@@ -524,76 +526,76 @@ function TrendAndForcasts() {
                                 </Paragraph>
 
                                 {/* Table 3 */}
-                                <div className="my-6 overflow-x-auto thin-scrollbar rounded-xl border border-white/15 bg-black/40 shadow-xl">
-                                    <div className="p-3 bg-white/5 border-b border-white/10 text-xs font-semibold uppercase tracking-wider text-primary-orange">
+                                <div className="my-6 overflow-x-auto thin-scrollbar rounded-xl border border-slate-200 bg-white shadow-sm">
+                                    <div className="p-3 bg-slate-100 border-b border-slate-200 text-xs font-bold uppercase tracking-wider text-blue-950">
                                         Table 3. Commute Flows within Tri-Cities Area MPO (Source: StreetLight, 2025)
                                     </div>
-                                    <table className="w-full text-left text-xs sm:text-sm text-text border-collapse">
+                                    <table className="w-full text-left text-xs sm:text-sm text-slate-800 border-collapse">
                                         <thead>
-                                            <tr className="bg-blue-900/40 border-b border-white/15 text-text">
-                                                <th className="py-2.5 px-3 font-semibold">Origin \ Destination</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Chesterfield</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Colonial Heights</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Dinwiddie</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Hopewell</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Petersburg</th>
-                                                <th className="py-2.5 px-3 font-semibold text-right">Prince George</th>
+                                            <tr className="bg-slate-50 border-b-2 border-slate-200 text-blue-950">
+                                                <th className="py-2.5 px-3 font-bold">Origin \ Destination</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Chesterfield</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Colonial Heights</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Dinwiddie</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Hopewell</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Petersburg</th>
+                                                <th className="py-2.5 px-3 font-bold text-right">Prince George</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="divide-y divide-white/5">
-                                            <tr className="hover:bg-white/5">
+                                        <tbody className="divide-y divide-slate-100">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Chesterfield</td>
-                                                <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">1,562</td>
+                                                <td className="py-2 px-3 text-right bg-blue-50/60 font-bold text-blue-950">1,562</td>
                                                 <td className="py-2 px-3 text-right">654</td>
                                                 <td className="py-2 px-3 text-right">312</td>
                                                 <td className="py-2 px-3 text-right">319</td>
                                                 <td className="py-2 px-3 text-right">618</td>
                                                 <td className="py-2 px-3 text-right">733</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Colonial Heights</td>
                                                 <td className="py-2 px-3 text-right">606</td>
-                                                <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">1,850</td>
+                                                <td className="py-2 px-3 text-right bg-blue-50/60 font-bold text-blue-950">1,850</td>
                                                 <td className="py-2 px-3 text-right">263</td>
                                                 <td className="py-2 px-3 text-right">271</td>
                                                 <td className="py-2 px-3 text-right">506</td>
                                                 <td className="py-2 px-3 text-right">684</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Dinwiddie</td>
                                                 <td className="py-2 px-3 text-right">283</td>
                                                 <td className="py-2 px-3 text-right">265</td>
-                                                <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">427</td>
+                                                <td className="py-2 px-3 text-right bg-blue-50/60 font-bold text-blue-950">427</td>
                                                 <td className="py-2 px-3 text-right">91</td>
                                                 <td className="py-2 px-3 text-right">535</td>
                                                 <td className="py-2 px-3 text-right">326</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Hopewell</td>
                                                 <td className="py-2 px-3 text-right">312</td>
                                                 <td className="py-2 px-3 text-right">321</td>
                                                 <td className="py-2 px-3 text-right">101</td>
-                                                <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">2,036</td>
+                                                <td className="py-2 px-3 text-right bg-blue-50/60 font-bold text-blue-950">2,036</td>
                                                 <td className="py-2 px-3 text-right">319</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,052</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-800">1,052</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Petersburg</td>
                                                 <td className="py-2 px-3 text-right">628</td>
                                                 <td className="py-2 px-3 text-right">507</td>
                                                 <td className="py-2 px-3 text-right">586</td>
                                                 <td className="py-2 px-3 text-right">301</td>
-                                                <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">2,155</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,106</td>
+                                                <td className="py-2 px-3 text-right bg-blue-50/60 font-bold text-blue-950">2,155</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-800">1,106</td>
                                             </tr>
-                                            <tr className="hover:bg-white/5">
+                                            <tr className="hover:bg-blue-50/40">
                                                 <td className="py-2 px-3 font-medium">Prince George</td>
                                                 <td className="py-2 px-3 text-right">625</td>
                                                 <td className="py-2 px-3 text-right">671</td>
                                                 <td className="py-2 px-3 text-right">250</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,034</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,097</td>
-                                                <td className="py-2 px-3 text-right bg-white/5 font-bold text-primary-orange">6,340</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-800">1,034</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-800">1,097</td>
+                                                <td className="py-2 px-3 text-right bg-blue-50/60 font-bold text-blue-950">6,340</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -603,7 +605,6 @@ function TrendAndForcasts() {
                     </div>
                 </SectionWrapper>
             </PageDisplay>
-        </>
     );
 }
 

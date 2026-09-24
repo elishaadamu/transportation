@@ -3,14 +3,14 @@ import { NavLink } from "react-router-dom";
 
 function Tab({ title, href }) {
     return (
-        <div className="border-b md:border-none">
+        <div className="border-b border-slate-100 md:border-none">
             <NavLink
                 to={href}
                 className={({ isActive }) =>
-                    `text-xs lg:text-sm capitalize block py-1.5 md:py-1.5 px-3 md:px-2.5 lg:px-3.5 w-full md:text-nowrap rounded-tl-md rounded-tr-md transition-all ${
+                    `text-xs lg:text-sm capitalize block py-2 md:py-1.5 px-3 md:px-2.5 lg:px-3.5 w-full md:text-nowrap rounded-md md:rounded-tl-md md:rounded-tr-md md:rounded-b-none transition-all ${
                         isActive
-                            ? "font-semibold bg-blue-900 text-white shadow-inner md:bg-blue-900 md:text-white ring-1 ring-white/20"
-                            : "text-text/90 md:bg-blue-600 md:text-white hover:bg-blue-700 md:hover:bg-blue-700 md:hover:text-white"
+                            ? "font-bold bg-blue-950 text-white shadow-sm md:bg-blue-950 md:text-white"
+                            : "text-slate-700 hover:text-blue-900 hover:bg-blue-50 md:bg-blue-600 md:text-white md:hover:bg-blue-700 font-medium"
                     }`
                 }
             >

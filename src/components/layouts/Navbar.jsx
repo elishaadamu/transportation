@@ -43,37 +43,24 @@ function Navbar() {
     };
 
     return (
-        <div className="pt-2 h-[3.6rem] md:h-[5.5rem] fixed z-[500] top-0 left-0 bg-bg w-screen ">
-            <div className="flex items-center justify-between px-4">
-                <div className="flex items-center justify-between gap-2 ">
+        <header className="pt-2 md:pt-2 h-[3.6rem] md:h-[5.5rem] fixed z-[500] top-0 left-0 bg-white border-b border-slate-200 shadow-sm w-screen">
+            <div className="flex items-center justify-between px-4 sm:px-6">
+                <div className="flex items-center gap-3">
                     <FaBars
-                        className="text-4xl cursor-pointer text-primary-orange md:hidden"
+                        className="text-2xl cursor-pointer text-blue-900 hover:text-blue-700 md:hidden"
                         onClick={toggleMenu}
                     />
-                    <p className="truncate sm:text-2xl text-primary-orange">
+                    <Link to="/" className="truncate font-extrabold text-base sm:text-xl md:text-2xl text-blue-950 tracking-tight hover:text-blue-800 transition-colors">
                         Tri-Cities MPO PLAN2050
-                    </p>
+                    </Link>
                 </div>
 
-                <div className="justify-center gap-1 mr-20 text-xl tems-center text-primary-red md:flex">
-                    {/* <Link to="/" className="mx-3 text-sm text-center underline">
-                        View the 2020 attachment report
-                    </Link>
-                    <Link to="/">
-                        <FaSquareFacebook />
-                    </Link>
-                    <Link to="/">
-                        <FaTwitterSquare />
-                    </Link>
-                    <Link to="/">
-                        <FiLink />
-                    </Link> */}
-
+                <div className="justify-center gap-1 mr-20 text-xl items-center md:flex">
                     <Link to="/">
                         <img
                             src={mpoLogo}
                             alt="Tri-Cities MPO logo"
-                            className="w-[4.2rem] md:w-[4.8rem] h-[2.2rem] md:h-[2.5rem] object-contain rounded bg-white/10 p-0.5 absolute right-4 md:right-8 top-1.5 md:top-2 hover:opacity-90 transition-opacity"
+                            className="w-[4.2rem] md:w-[4.8rem] h-[2.2rem] md:h-[2.5rem] object-contain rounded p-0.5 absolute right-4 md:right-8 top-1.5 md:top-2 hover:opacity-90 transition-opacity"
                         />
                     </Link>
                 </div>
@@ -82,31 +69,29 @@ function Navbar() {
             {/* Mobile menu Div */}
             <div
                 ref={menuRef}
-                className="h-0 md:h-[3.4rem] md:relative bottom-[.2rem] overflow-hidden md:overflow-x-auto thin-scrollbar bg-active-link md:bg-transparent transition-all md:-mt-[.08rem] mt-[.7rem]"
+                className="h-0 md:h-[3.2rem] md:relative bottom-[.1rem] overflow-hidden md:overflow-x-auto thin-scrollbar bg-white md:bg-transparent shadow-xl md:shadow-none border-b md:border-none border-slate-200 transition-all mt-[.6rem] md:mt-0"
             >
-                <div className="flex items-center justify-between w-full px-4 py-8 md:hidden">
-                    <Link to="/" className="mx-3 text-sm text-center underline">
-                        View the 2020 attachment report
-                    </Link>
-                    <Link to="/" className="w-[8rem] h-auto">
-                        <img src={mpoLogo} alt="Tri-Cities MPO logo" className="w-full h-auto object-contain rounded bg-white/10 p-1" />
+                <div className="flex items-center justify-between w-full px-4 py-4 md:hidden border-b border-slate-100">
+                    <span className="text-xs font-bold uppercase tracking-wider text-blue-900">Navigation Menu</span>
+                    <Link to="/" className="w-[6rem] h-auto">
+                        <img src={mpoLogo} alt="Tri-Cities MPO logo" className="w-full h-auto object-contain" />
                     </Link>
                 </div>
 
-                <div className="items-center gap-1.5 lg:gap-2 px-4 md:flex md:justify-center md:mt-3 md:min-w-max pb-1">
+                <div className="items-center gap-1 lg:gap-1.5 px-4 md:flex md:justify-center md:mt-2.5 md:min-w-max pb-1">
                     <Tab title="report" href="/" />
                     <Tab title="Introduction" href="/introduction" />
                     <Tab
                         title="National and Regional Trends and Forecasts"
                         href="/trend_and_forecast"
                     />
-                    <Tab title="System Today " href="/system_today" />
+                    <Tab title="System Today" href="/system_today" />
                     <Tab title="System Tomorrow" href="/system_tomorrow" />
-                    <Tab title="Funding " href="/funding" />
-                    <Tab title="Appendices " href="/appendices" />
+                    <Tab title="Funding" href="/funding" />
+                    <Tab title="Appendices" href="/appendices" />
                 </div>
             </div>
-        </div>
+        </header>
     );
 }
 

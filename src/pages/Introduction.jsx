@@ -63,15 +63,17 @@ function Introduction() {
     ];
 
     return (
-        <>
-            <PageHeader img="https://images.unsplash.com/photo-1617886322168-72b886573c35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <PageDisplay>
+            <PageHeader
+                img="https://images.unsplash.com/photo-1617886322168-72b886573c35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                subtitle="Chapter 1"
+            >
                 Chapter 1: Introduction
             </PageHeader>
-            <PageDisplay>
-                <SectionWrapper backgroundImage="https://images.unsplash.com/photo-1591866605101-67aa6d498cce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-                    <div className="flex flex-col md:flex-row items-start justify-center gap-8 max-w-[94rem] mx-auto px-4 sm:px-6 py-6 relative">
-                        {/* Left Tabs Sidebar */}
-                        <TableOfContent sections={sections} title="Introduction Tabs" />
+            <SectionWrapper>
+                <div className="flex flex-col md:flex-row items-start justify-center gap-8 max-w-[94rem] mx-auto px-4 sm:px-6 py-8 relative">
+                    {/* Left Tabs Sidebar */}
+                    <TableOfContent sections={sections} title="Introduction Tabs" />
 
                         {/* Content Area */}
                         <main className="flex-1 min-w-0 w-full flex flex-col items-center">
@@ -86,13 +88,13 @@ function Introduction() {
                                     Figure 1 depicts the TCAMPO planning area in the context of the Richmond MSA. According to the 2020 decennial census, the population of TCAMPO was 167,920. With a land area of approximately 324 square miles, the MPO has a population density of approximately 518 people per square mile. Among all MPOs in Virginia, TCAMPO is ranked fifth in terms of population, sixth in land area, and tenth in population density. Although the population of the Tri-Cities region grew by 24.4 percent between the last two decennial censuses, it lags behind the state (39.5 percent) and the nation (33.3 percent).
                                 </Paragraph>
 
-                                <div className="my-6 rounded-xl overflow-hidden border border-white/10 shadow-lg bg-black/40">
+                                <div className="my-6 rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                                     <img
                                         src={docImg1}
                                         alt="Greater Richmond Region and Metropolitan Planning Organization Boundaries"
                                         className="w-full h-auto object-cover max-h-[34rem]"
                                     />
-                                    <p className="text-xs text-text/70 p-3 text-center italic bg-black/60">
+                                    <p className="text-xs sm:text-sm text-slate-600 p-3 text-center italic bg-slate-100 border-t border-slate-200">
                                         Figure 1. Greater Richmond Region and Metropolitan Planning Organization Boundaries
                                     </p>
                                 </div>
@@ -138,17 +140,17 @@ function Introduction() {
                                 </Paragraph>
 
                                 <List>
-                                    <li className="text-text/90">
-                                        <strong className="text-primary-orange">Unified Planning Work Program (UPWP)</strong> – updated annually
+                                    <li className="text-slate-700">
+                                        <strong className="text-blue-950 font-bold">Unified Planning Work Program (UPWP)</strong> – updated annually
                                     </li>
-                                    <li className="text-text/90">
-                                        <strong className="text-primary-orange">Metropolitan Transportation Plan (MTP)</strong> – updated every four years
+                                    <li className="text-slate-700">
+                                        <strong className="text-blue-950 font-bold">Metropolitan Transportation Plan (MTP)</strong> – updated every four years
                                     </li>
-                                    <li className="text-text/90">
-                                        <strong className="text-primary-orange">Metropolitan Transportation Improvement Program (MTIP)</strong> – updated every four years
+                                    <li className="text-slate-700">
+                                        <strong className="text-blue-950 font-bold">Metropolitan Transportation Improvement Program (MTIP)</strong> – updated every four years
                                     </li>
-                                    <li className="text-text/90">
-                                        <strong className="text-primary-orange">Congestion Management Process (CMP)</strong> – maintained on an ongoing basis
+                                    <li className="text-slate-700">
+                                        <strong className="text-blue-950 font-bold">Congestion Management Process (CMP)</strong> – maintained on an ongoing basis
                                     </li>
                                 </List>
 
@@ -176,7 +178,7 @@ function Introduction() {
                                     Since the Intermodal Surface Transportation Efficiency Act of 1991 (ISTEA), Congress has identified key planning areas for MPOs and states to consider when developing multimodal transportation plans. MAP-21 established ten planning factors under 23 CFR 450.306 that remain in effect through the FAST Act and IIJA:
                                 </Paragraph>
 
-                                <ol className="list-decimal pl-6 space-y-2 text-text/90 text-sm md:text-base leading-relaxed">
+                                <ol className="list-decimal pl-6 space-y-2 text-slate-700 text-sm md:text-base leading-relaxed">
                                     <li>Support the economic vitality of the metropolitan area, especially by enabling global competitiveness, productivity, and efficiency</li>
                                     <li>Increase the safety of the transportation system for motorized and non-motorized users</li>
                                     <li>Increase the security of the transportation system for motorized and non-motorized users</li>
@@ -219,20 +221,20 @@ function Introduction() {
                                     The goals and objectives for Plan2050 build on the framework established for the region’s previously adopted LRTP, Plan2045, and were affirmed through the MPO’s Multimodal Mobility Plan in 2025. Rather than beginning from scratch, TCAMPO used the multimodal planning process as an opportunity to validate that the existing goals remained relevant to the region&apos;s evolving conditions, community priorities, and federal performance requirements. Guided by the previous public survey developed for the region’s previous LRTP (Plan2045) and subsequent planning efforts, TCAMPO adopted the following goals and objectives:
                                 </Paragraph>
 
-                                <div className="space-y-6 mt-4">
-                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-blue-500">
-                                        <SubHeading>1. Safety</SubHeading>
-                                        <p className="font-medium text-text mb-2">Improve the safety of the transportation system for all people.</p>
-                                        <ul className="list-disc pl-5 space-y-1 text-sm text-text/80">
+                                <div className="space-y-6 mt-6">
+                                    <div className="p-5 rounded-r-xl bg-blue-50/80 border-l-4 border-blue-600 shadow-sm text-slate-800">
+                                        <h3 className="text-lg font-bold text-blue-950 mb-1">1. Safety</h3>
+                                        <p className="font-semibold text-slate-800 mb-2">Improve the safety of the transportation system for all people.</p>
+                                        <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
                                             <li>Enhance safety and comfort of bicycle and pedestrian facilities</li>
                                             <li>Work to eliminate all serious injuries and fatalities resulting from crashes</li>
                                         </ul>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-primary-orange">
-                                        <SubHeading>2. Environment / Land Use</SubHeading>
-                                        <p className="font-medium text-text mb-2">Reduce the negative impact the transportation system has on the natural and built environment.</p>
-                                        <ul className="list-disc pl-5 space-y-1 text-sm text-text/80">
+                                    <div className="p-5 rounded-r-xl bg-emerald-50/80 border-l-4 border-emerald-600 shadow-sm text-slate-800">
+                                        <h3 className="text-lg font-bold text-emerald-950 mb-1">2. Environment / Land Use</h3>
+                                        <p className="font-semibold text-slate-800 mb-2">Reduce the negative impact the transportation system has on the natural and built environment.</p>
+                                        <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
                                             <li>Address roadways prone to flooding and consider climate impacts in transportation planning prioritization and funding decisions.</li>
                                             <li>Reduce transportation related pollutants.</li>
                                             <li>Increase number and share of trips taken by shared and active transportation modes.</li>
@@ -241,19 +243,19 @@ function Introduction() {
                                         </ul>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-yellow-500">
-                                        <SubHeading>3. Equity / Accessibility</SubHeading>
-                                        <p className="font-medium text-text mb-2">Improve equitable access through greater availability of mode choices that are affordable and efficient.</p>
-                                        <ul className="list-disc pl-5 space-y-1 text-sm text-text/80">
+                                    <div className="p-5 rounded-r-xl bg-purple-50/80 border-l-4 border-purple-600 shadow-sm text-slate-800">
+                                        <h3 className="text-lg font-bold text-purple-950 mb-1">3. Equity / Accessibility</h3>
+                                        <p className="font-semibold text-slate-800 mb-2">Improve equitable access through greater availability of mode choices that are affordable and efficient.</p>
+                                        <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
                                             <li>Reduce trip lengths for all people with a focus on Environmental Justice (EJ) populations.</li>
                                             <li>Increase access to jobs and community services via transit, walking, and biking for all people with a focus on EJ populations.</li>
                                         </ul>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-emerald-500">
-                                        <SubHeading>4. Economic Development</SubHeading>
-                                        <p className="font-medium text-text mb-2">Improve connectivity and mobility for strong economic vitality.</p>
-                                        <ul className="list-disc pl-5 space-y-1 text-sm text-text/80">
+                                    <div className="p-5 rounded-r-xl bg-amber-50/80 border-l-4 border-amber-600 shadow-sm text-slate-800">
+                                        <h3 className="text-lg font-bold text-amber-950 mb-1">4. Economic Development</h3>
+                                        <p className="font-semibold text-slate-800 mb-2">Improve connectivity and mobility for strong economic vitality.</p>
+                                        <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
                                             <li>Reduce peak period travel times.</li>
                                             <li>Increase transportation investment which focuses on economic vitality.</li>
                                             <li>Improve reliability and accessibility of travel to and within the regional activity centers.</li>
@@ -262,10 +264,10 @@ function Introduction() {
                                         </ul>
                                     </div>
 
-                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-blue-500">
-                                        <SubHeading>5. Mobility</SubHeading>
-                                        <p className="font-medium text-text mb-2">Increase travel efficiency and mode choices by maintaining the transportation system in a state of good repair.</p>
-                                        <ul className="list-disc pl-5 space-y-1 text-sm text-text/80">
+                                    <div className="p-5 rounded-r-xl bg-sky-50/80 border-l-4 border-sky-600 shadow-sm text-slate-800">
+                                        <h3 className="text-lg font-bold text-sky-950 mb-1">5. Mobility</h3>
+                                        <p className="font-semibold text-slate-800 mb-2">Increase travel efficiency and mode choices by maintaining the transportation system in a state of good repair.</p>
+                                        <ul className="list-disc pl-5 space-y-1 text-sm text-slate-700">
                                             <li>Increase the percent of complete streets across the highway network to maximize use of available capacity.</li>
                                             <li>Increase system efficiency through operational, transportation demand management (TDM), and technology-based solutions.</li>
                                             <li>Improve system reliability across all modes.</li>
@@ -302,7 +304,7 @@ function Introduction() {
 
                                     <div>
                                         <SubHeading>Scenario Development and Evaluation</SubHeading>
-                                        <div className="p-3 bg-white/5 rounded-lg border border-dashed border-white/20 text-xs text-text/60 italic">
+                                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 italic">
                                             Content under development (TBD)
                                         </div>
                                     </div>
@@ -333,8 +335,8 @@ function Introduction() {
                             {/* 10. Relationship to Other Plans, Reports, and Studies */}
                             <PageSection id="relationship-other-plans">
                                 <SectionHeader>Relationship to Other Plans, Reports, and Studies</SectionHeader>
-                                <div className="p-6 rounded-2xl bg-white/5 border border-dashed border-white/20 text-center">
-                                    <p className="text-text/70 text-sm">
+                                <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                                    <p className="text-slate-600 text-sm">
                                         Content under development (TBD). Details on alignments with regional, state, and local plans will be incorporated here.
                                     </p>
                                 </div>
@@ -343,8 +345,8 @@ function Introduction() {
                             {/* 11. What We Heard: Stakeholder Involvement and Public Outreach */}
                             <PageSection id="what-we-heard">
                                 <SectionHeader>What We Heard: Stakeholder Involvement and Public Outreach</SectionHeader>
-                                <div className="p-6 rounded-2xl bg-white/5 border border-dashed border-white/20 text-center">
-                                    <p className="text-text/70 text-sm">
+                                <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                                    <p className="text-slate-600 text-sm">
                                         Content under development (TBD). Summary of public engagement feedback, stakeholder surveys, and open houses will appear here.
                                     </p>
                                 </div>
@@ -353,7 +355,6 @@ function Introduction() {
                     </div>
                 </SectionWrapper>
             </PageDisplay>
-        </>
     );
 }
 

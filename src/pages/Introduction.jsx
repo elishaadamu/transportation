@@ -220,7 +220,7 @@ function Introduction() {
                                 </Paragraph>
 
                                 <div className="space-y-6 mt-4">
-                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-primary-red">
+                                    <div className="p-4 rounded-xl bg-white/5 border-l-4 border-blue-500">
                                         <SubHeading>1. Safety</SubHeading>
                                         <p className="font-medium text-text mb-2">Improve the safety of the transportation system for all people.</p>
                                         <ul className="list-disc pl-5 space-y-1 text-sm text-text/80">

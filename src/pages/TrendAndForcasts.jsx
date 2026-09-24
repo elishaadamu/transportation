@@ -276,7 +276,7 @@ function TrendAndForcasts() {
                                     </div>
                                     <table className="w-full text-left text-xs sm:text-sm text-text border-collapse">
                                         <thead>
-                                            <tr className="bg-primary-red/30 border-b border-white/15 text-text">
+                                            <tr className="bg-blue-900/40 border-b border-white/15 text-text">
                                                 <th className="py-2.5 px-3 font-semibold">Jurisdiction</th>
                                                 <th className="py-2.5 px-3 font-semibold text-right">Population 2017</th>
                                                 <th className="py-2.5 px-3 font-semibold text-right">Population 2050</th>
@@ -416,7 +416,7 @@ function TrendAndForcasts() {
                                     </div>
                                     <table className="w-full text-left text-xs sm:text-sm text-text border-collapse">
                                         <thead>
-                                            <tr className="bg-primary-red/30 border-b border-white/15 text-text">
+                                            <tr className="bg-blue-900/40 border-b border-white/15 text-text">
                                                 <th className="py-2.5 px-3 font-semibold">Jurisdiction</th>
                                                 <th className="py-2.5 px-3 font-semibold text-right">Households</th>
                                                 <th className="py-2.5 px-3 font-semibold text-right">No Vehicle</th>
@@ -461,7 +461,7 @@ function TrendAndForcasts() {
                                             <tr className="hover:bg-white/5">
                                                 <td className="py-2 px-3 font-medium">Hopewell</td>
                                                 <td className="py-2 px-3 text-right">9,255</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-red">11.66%</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">11.66%</td>
                                                 <td className="py-2 px-3 text-right">35.73%</td>
                                                 <td className="py-2 px-3 text-right">26.12%</td>
                                                 <td className="py-2 px-3 text-right">26.49%</td>
@@ -469,7 +469,7 @@ function TrendAndForcasts() {
                                             <tr className="hover:bg-white/5">
                                                 <td className="py-2 px-3 font-medium">Petersburg</td>
                                                 <td className="py-2 px-3 text-right">15,138</td>
-                                                <td className="py-2 px-3 text-right font-bold text-primary-red">14.84%</td>
+                                                <td className="py-2 px-3 text-right font-bold text-blue-400">14.84%</td>
                                                 <td className="py-2 px-3 text-right font-semibold text-primary-orange">48.43%</td>
                                                 <td className="py-2 px-3 text-right">25.84%</td>
                                                 <td className="py-2 px-3 text-right">10.89%</td>
@@ -477,7 +477,7 @@ function TrendAndForcasts() {
                                             <tr className="bg-white/10 font-bold border-t border-white/20 text-white">
                                                 <td className="py-2.5 px-3">TCAMPO Region</td>
                                                 <td className="py-2.5 px-3 text-right">62,553</td>
-                                                <td className="py-2.5 px-3 text-right text-primary-red">8.20%</td>
+                                                <td className="py-2.5 px-3 text-right text-blue-400">8.20%</td>
                                                 <td className="py-2.5 px-3 text-right">31.87%</td>
                                                 <td className="py-2.5 px-3 text-right">32.49%</td>
                                                 <td className="py-2.5 px-3 text-right">27.45%</td>
@@ -530,7 +530,7 @@ function TrendAndForcasts() {
                                     </div>
                                     <table className="w-full text-left text-xs sm:text-sm text-text border-collapse">
                                         <thead>
-                                            <tr className="bg-primary-red/30 border-b border-white/15 text-text">
+                                            <tr className="bg-blue-900/40 border-b border-white/15 text-text">
                                                 <th className="py-2.5 px-3 font-semibold">Origin \ Destination</th>
                                                 <th className="py-2.5 px-3 font-semibold text-right">Chesterfield</th>
                                                 <th className="py-2.5 px-3 font-semibold text-right">Colonial Heights</th>
@@ -575,7 +575,7 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">101</td>
                                                 <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">2,036</td>
                                                 <td className="py-2 px-3 text-right">319</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-red">1,052</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,052</td>
                                             </tr>
                                             <tr className="hover:bg-white/5">
                                                 <td className="py-2 px-3 font-medium">Petersburg</td>
@@ -584,15 +584,15 @@ function TrendAndForcasts() {
                                                 <td className="py-2 px-3 text-right">586</td>
                                                 <td className="py-2 px-3 text-right">301</td>
                                                 <td className="py-2 px-3 text-right bg-white/5 font-semibold text-primary-orange">2,155</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-red">1,106</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,106</td>
                                             </tr>
                                             <tr className="hover:bg-white/5">
                                                 <td className="py-2 px-3 font-medium">Prince George</td>
                                                 <td className="py-2 px-3 text-right">625</td>
                                                 <td className="py-2 px-3 text-right">671</td>
                                                 <td className="py-2 px-3 text-right">250</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-red">1,034</td>
-                                                <td className="py-2 px-3 text-right font-semibold text-primary-red">1,097</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,034</td>
+                                                <td className="py-2 px-3 text-right font-semibold text-blue-400">1,097</td>
                                                 <td className="py-2 px-3 text-right bg-white/5 font-bold text-primary-orange">6,340</td>
                                             </tr>
                                         </tbody>

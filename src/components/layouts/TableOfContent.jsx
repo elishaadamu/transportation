@@ -23,8 +23,8 @@ function TableOfContent({ sections, title = "TABLE OF CONTENTS" }) {
                             smooth={true}
                             offset={-100}
                             duration={400}
-                            activeClass="!bg-active-link !text-white font-semibold shadow-md border-l-4 border-primary-orange pl-3.5"
-                            className="group flex items-center gap-2.5 py-2.5 px-3 rounded-lg text-xs lg:text-sm text-text/75 hover:text-white hover:bg-white/10 transition-all cursor-pointer text-left"
+                            activeClass="!bg-blue-800 !text-white font-semibold shadow-md border-l-4 border-primary-orange pl-3.5"
+                            className="group flex items-center gap-2.5 py-2.5 px-3 rounded-lg text-xs lg:text-sm text-text/75 hover:text-white hover:bg-blue-900/40 transition-all cursor-pointer text-left"
                         >
                             <span className="shrink-0 w-5 h-5 rounded-full bg-white/10 group-hover:bg-primary-orange/20 text-primary-orange text-[10px] font-bold flex items-center justify-center">
                                 {idx + 1}
@@ -48,8 +48,8 @@ function TableOfContent({ sections, title = "TABLE OF CONTENTS" }) {
                             smooth={true}
                             offset={-80}
                             duration={400}
-                            activeClass="!bg-active-link !text-white font-semibold ring-2 ring-primary-orange"
-                            className="whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium bg-primary-red/80 text-white shrink-0 hover:bg-active-link transition-colors cursor-pointer"
+                            activeClass="!bg-blue-800 !text-white font-semibold ring-2 ring-primary-orange"
+                            className="whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium bg-blue-600/90 text-white shrink-0 hover:bg-blue-800 transition-colors cursor-pointer"
                         >
                             {idx + 1}. {section.title}
                         </Link>

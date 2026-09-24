@@ -11,8 +11,10 @@ export default {
                 bg: "black",
                 "primary-orange": "#fdb913",
                 "primary-black": "black",
-                "primary-red": "#cc5262",
-                "active-link": "#a30c33",
+                "primary-blue": "#2563eb",
+                "active-blue": "#1e3a8a",
+                "primary-red": "#2563eb", // Updated to blue
+                "active-link": "#1e40af", // Updated to rich blue
             },
         },
     },

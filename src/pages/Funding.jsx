@@ -4,7 +4,11 @@ import { PageDisplay, PageHeader } from "../components/layouts";
 function Funding() {
     return (
         <PageDisplay>
-            <PageHeader subtitle="Chapter 5">
+            <PageHeader
+                subtitle="Chapter 5"
+                downloadUrl="/downloads/TCAMPO_Plan2050_Chapter5_Funding_the_Plan.pdf"
+                downloadFilename="TCAMPO_Plan2050_Chapter5_Funding_the_Plan.pdf"
+            >
                 Chapter 5: Funding the Plan
             </PageHeader>
             <div className="flex flex-col items-center justify-center flex-1 px-4 py-16 text-center bg-white">

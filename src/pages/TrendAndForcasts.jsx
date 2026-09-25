@@ -66,6 +66,8 @@ function TrendAndForcasts() {
             <PageHeader
                 img="https://plus.unsplash.com/premium_photo-1673971700988-346588461fa7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 subtitle="Chapter 2"
+                downloadUrl="/downloads/TCAMPO_Plan2050_Chapter2_National_and_Regional_Trends_and_Forecasts.pdf"
+                downloadFilename="TCAMPO_Plan2050_Chapter2_Trends_and_Forecasts.pdf"
             >
                 Chapter 2: National and Regional Trends and Forecasts
             </PageHeader>

@@ -4,7 +4,11 @@ import { PageDisplay, PageHeader } from "../components/layouts";
 function Appendices() {
     return (
         <PageDisplay>
-            <PageHeader subtitle="Documentation">
+            <PageHeader
+                subtitle="Documentation"
+                downloadUrl="/downloads/TCAMPO_Plan2050_Appendices.pdf"
+                downloadFilename="TCAMPO_Plan2050_Appendices.pdf"
+            >
                 Appendices
             </PageHeader>
             <div className="flex flex-col items-center justify-center flex-1 px-4 py-16 text-center bg-white">

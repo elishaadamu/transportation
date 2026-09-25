@@ -7,6 +7,8 @@ function SystemTomorrow() {
             <PageHeader
                 img="https://images.unsplash.com/photo-1498374084266-8fbbbd6ac90b?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 subtitle="Chapter 4"
+                downloadUrl="/downloads/TCAMPO_Plan2050_Chapter4_System_Tomorrow_2050.pdf"
+                downloadFilename="TCAMPO_Plan2050_Chapter4_System_Tomorrow_2050.pdf"
             >
                 Chapter 4: Our System Tomorrow: 2050
             </PageHeader>

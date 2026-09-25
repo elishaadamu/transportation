@@ -67,6 +67,8 @@ function Introduction() {
             <PageHeader
                 img="https://images.unsplash.com/photo-1617886322168-72b886573c35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 subtitle="Chapter 1"
+                downloadUrl="/downloads/TCAMPO_Plan2050_Chapter1_Introduction.pdf"
+                downloadFilename="TCAMPO_Plan2050_Chapter1_Introduction.pdf"
             >
                 Chapter 1: Introduction
             </PageHeader>

@@ -7,6 +7,8 @@ function SystemToday() {
             <PageHeader
                 img="https://images.unsplash.com/photo-1514395629347-41e19e338c6a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 subtitle="Chapter 3"
+                downloadUrl="/downloads/TCAMPO_Plan2050_Chapter3_Transportation_System_Today.pdf"
+                downloadFilename="TCAMPO_Plan2050_Chapter3_Transportation_System_Today.pdf"
             >
                 Chapter 3: Our Transportation System Today
             </PageHeader>

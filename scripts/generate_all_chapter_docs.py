@@ -74,7 +74,7 @@ body {
     font-weight: 800;
 }
 .hero-title-box {
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    background: #0f2438;
     color: white;
     padding: 24px;
     border-radius: 8px;

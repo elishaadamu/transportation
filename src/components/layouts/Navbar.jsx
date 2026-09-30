@@ -78,8 +78,8 @@ function Navbar() {
                     </Link>
                 </div>
 
-                <div className="items-center gap-1 lg:gap-1.5 px-4 md:flex md:justify-center md:mt-2.5 md:min-w-max pb-1">
-                    <Tab title="report" href="/" />
+                <div className="items-center gap-1.5 lg:gap-2 px-4 md:flex md:justify-center md:mt-2 md:min-w-max pb-1">
+                    <Tab title="Report" href="/" />
                     <Tab title="Introduction" href="/introduction" />
                     <Tab
                         title="National and Regional Trends and Forecasts"

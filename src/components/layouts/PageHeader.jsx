@@ -13,31 +13,6 @@ const DEFAULT_CHAPTER_DOWNLOADS = {
         filename: "TCAMPO_Plan2050_Chapter2_Trends_and_Forecasts.pdf",
         label: "Download PDF",
     },
-    "chapter 3": {
-        url: "/downloads/TCAMPO_Plan2050_Chapter3_Transportation_System_Today.pdf",
-        filename: "TCAMPO_Plan2050_Chapter3_Transportation_System_Today.pdf",
-        label: "Download PDF",
-    },
-    "chapter 4": {
-        url: "/downloads/TCAMPO_Plan2050_Chapter4_System_Tomorrow_2050.pdf",
-        filename: "TCAMPO_Plan2050_Chapter4_System_Tomorrow_2050.pdf",
-        label: "Download PDF",
-    },
-    "chapter 5": {
-        url: "/downloads/TCAMPO_Plan2050_Chapter5_Funding_the_Plan.pdf",
-        filename: "TCAMPO_Plan2050_Chapter5_Funding_the_Plan.pdf",
-        label: "Download PDF",
-    },
-    "documentation": {
-        url: "/downloads/TCAMPO_Plan2050_Appendices.pdf",
-        filename: "TCAMPO_Plan2050_Appendices.pdf",
-        label: "Download PDF",
-    },
-    "appendices": {
-        url: "/downloads/TCAMPO_Plan2050_Appendices.pdf",
-        filename: "TCAMPO_Plan2050_Appendices.pdf",
-        label: "Download PDF",
-    },
 };
 
 function PageHeader({

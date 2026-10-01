@@ -6,8 +6,7 @@ function Appendices() {
         <PageDisplay>
             <PageHeader
                 subtitle="Documentation"
-                downloadUrl="/downloads/TCAMPO_Plan2050_Appendices.pdf"
-                downloadFilename="TCAMPO_Plan2050_Appendices.pdf"
+                showDownload={false}
             >
                 Appendices
             </PageHeader>

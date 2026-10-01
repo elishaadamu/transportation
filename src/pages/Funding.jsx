@@ -6,8 +6,7 @@ function Funding() {
         <PageDisplay>
             <PageHeader
                 subtitle="Chapter 5"
-                downloadUrl="/downloads/TCAMPO_Plan2050_Chapter5_Funding_the_Plan.pdf"
-                downloadFilename="TCAMPO_Plan2050_Chapter5_Funding_the_Plan.pdf"
+                showDownload={false}
             >
                 Chapter 5: Funding the Plan
             </PageHeader>

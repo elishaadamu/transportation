@@ -1,48 +1,77 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBars, FaXmark } from "react-icons/fa6";
-import { FiChevronDown, FiBookOpen, FiFileText, FiCheck, FiArrowRight } from "react-icons/fi";
+import { FiChevronDown, FiBookOpen, FiArrowRight, FiCheck } from "react-icons/fi";
+import { Tab } from "../common";
 import { mpoLogo } from "../../assets";
 
-const CHAPTERS = [
+const ALL_CHAPTERS = [
     {
         number: "01",
         title: "Introduction",
+        fullTitle: "Chapter 1: Introduction",
         subtitle: "Vision, goals & planning framework",
         path: "/introduction",
     },
     {
         number: "02",
         title: "Trends & Forecast",
-        fullTitle: "National and Regional Trends and Forecasts",
+        fullTitle: "Chapter 2: Trends and Forecasts",
         subtitle: "Demographics, freight & emerging trends",
         path: "/trend_and_forecast",
+    },
+    {
+        number: "03",
+        title: "System Today",
+        fullTitle: "Chapter 3: System Today",
+        subtitle: "Existing multimodal transportation network",
+        path: "/system_today",
+    },
+    {
+        number: "04",
+        title: "System Tomorrow",
+        fullTitle: "Chapter 4: System Tomorrow",
+        subtitle: "Future needs, corridors & vision projects",
+        path: "/system_tomorrow",
+    },
+    {
+        number: "05",
+        title: "Funding",
+        fullTitle: "Chapter 5: Funding",
+        subtitle: "Revenue forecasts & fiscal constraint",
+        path: "/funding",
+    },
+    {
+        number: "App",
+        title: "Appendices",
+        fullTitle: "Appendices & Documentation",
+        subtitle: "Technical documentation & methodology",
+        path: "/appendices",
     },
 ];
 
 function Navbar() {
     const location = useLocation();
-    const [openMobileMenu, setOpenMobileMenu] = useState(false);
-    const [openChaptersDropdown, setOpenChaptersDropdown] = useState(false);
-    const [mobileChaptersExpanded, setMobileChaptersExpanded] = useState(true);
+    const [openMenu, setOpenMenu] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(false);
+    const [mobileChaptersOpen, setMobileChaptersOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const mobileMenuRef = useRef(null);
 
-    // Check active states
-    const isChapterActive = CHAPTERS.some((ch) => ch.path === location.pathname);
-    const isReportActive = location.pathname === "/" || location.pathname === "/summary";
+    // Is current location the Explore Chapters page or a chapter
+    const isExploreActive = location.pathname === "/explore_chapters";
+    const isAnyChapterActive = ALL_CHAPTERS.some((ch) => ch.path === location.pathname);
 
-    // Close dropdown on outside click or escape key
+    // Handle outside clicks to close the dropdown
     useEffect(() => {
         function handleClickOutside(event) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setOpenChaptersDropdown(false);
+                setOpenDropdown(false);
             }
         }
         function handleKeyDown(e) {
             if (e.key === "Escape") {
-                setOpenChaptersDropdown(false);
-                setOpenMobileMenu(false);
+                setOpenDropdown(false);
+                setOpenMenu(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
@@ -55,116 +84,134 @@ function Navbar() {
 
     // Close menus upon route change
     useEffect(() => {
-        setOpenChaptersDropdown(false);
-        setOpenMobileMenu(false);
+        setOpenDropdown(false);
+        setOpenMenu(false);
     }, [location.pathname]);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-[500] bg-white border-b border-slate-200/90 shadow-xs h-[4.25rem] transition-all">
-            <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-                {/* Brand & Logo on Left */}
+        <header className="pt-2 md:pt-2 h-[3.6rem] md:h-[5.5rem] fixed z-[500] top-0 left-0 bg-white border-b border-slate-200 shadow-sm w-screen">
+            {/* Top row: Brand & Logo */}
+            <div className="flex items-center justify-between px-4 sm:px-6">
                 <div className="flex items-center gap-3">
                     <button
                         type="button"
                         aria-label="Toggle navigation menu"
-                        onClick={() => setOpenMobileMenu((prev) => !prev)}
-                        className="p-2 -ml-2 rounded-lg text-blue-950 hover:bg-slate-100 md:hidden focus:outline-none focus:ring-2 focus:ring-blue-900 transition-colors"
+                        onClick={() => setOpenMenu((prev) => !prev)}
+                        className="text-2xl text-blue-900 hover:text-blue-700 md:hidden p-1 focus:outline-none"
                     >
-                        {openMobileMenu ? (
-                            <FaXmark className="text-xl" />
-                        ) : (
-                            <FaBars className="text-xl" />
-                        )}
+                        {openMenu ? <FaXmark /> : <FaBars />}
                     </button>
-
                     <Link
                         to="/"
-                        className="flex items-center gap-2.5 group focus:outline-none"
+                        className="truncate font-extrabold text-base sm:text-xl md:text-2xl text-blue-950 tracking-tight hover:text-blue-800 transition-colors"
                     >
-                        <img
-                            src={mpoLogo}
-                            alt="Tri-Cities MPO Logo"
-                            className="h-9 w-auto object-contain rounded p-0.5 group-hover:opacity-90 transition-opacity"
-                        />
-                        <div className="flex flex-col">
-                            <span className="font-extrabold text-base sm:text-lg md:text-xl text-blue-950 tracking-tight group-hover:text-blue-800 transition-colors leading-tight">
-                                Tri-Cities MPO PLAN2050
-                            </span>
-                            <span className="hidden sm:inline-block text-[10px] uppercase font-bold tracking-widest text-slate-500">
-                                Long-Range Transportation Plan
-                            </span>
-                        </div>
+                        Tri-Cities MPO PLAN2050
                     </Link>
                 </div>
 
-                {/* Desktop Navigation Links: Report and Explore Chapters only */}
-                <nav className="hidden md:flex items-center gap-2 lg:gap-3">
-                    {/* 1. Report */}
-                    <NavLink
-                        to="/"
-                        className={() =>
-                            `px-4 py-2 rounded-lg text-xs lg:text-sm font-bold transition-all flex items-center gap-1.5 ${
-                                isReportActive
-                                    ? "bg-blue-950 text-white shadow-xs"
-                                    : "text-slate-700 hover:text-blue-950 hover:bg-slate-100"
-                            }`
-                        }
-                    >
-                        <FiFileText className="w-4 h-4" />
-                        <span>Report</span>
-                    </NavLink>
+                <div className="justify-center gap-1 mr-20 text-xl items-center md:flex">
+                    <Link to="/">
+                        <img
+                            src={mpoLogo}
+                            alt="Tri-Cities MPO logo"
+                            className="w-[4.2rem] md:w-[4.8rem] h-[2.2rem] md:h-[2.5rem] object-contain rounded p-0.5 absolute right-4 md:right-8 top-1.5 md:top-2 hover:opacity-90 transition-opacity"
+                        />
+                    </Link>
+                </div>
+            </div>
 
-                    {/* 2. Explore Chapters (Dropdown) */}
-                    <div className="relative" ref={dropdownRef}>
-                        <button
-                            type="button"
-                            onClick={() => setOpenChaptersDropdown((prev) => !prev)}
-                            aria-expanded={openChaptersDropdown}
-                            className={`px-4 py-2 rounded-lg text-xs lg:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer ${
-                                isChapterActive
-                                    ? "bg-blue-950 text-white shadow-xs"
-                                    : openChaptersDropdown
-                                    ? "bg-slate-100 text-blue-950"
-                                    : "text-slate-700 hover:text-blue-950 hover:bg-slate-100"
-                            }`}
-                        >
-                            <FiBookOpen className="w-4 h-4" />
-                            <span>Explore Chapters</span>
-                            <FiChevronDown
-                                className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                                    openChaptersDropdown ? "rotate-180" : ""
-                                }`}
-                            />
-                        </button>
+            {/* Desktop Navigation Row & Mobile Drawer */}
+            <div
+                className={`${
+                    openMenu
+                        ? "h-[calc(100vh-3.6rem)] bg-white overflow-y-auto"
+                        : "h-0 md:h-[3.2rem] overflow-hidden"
+                } md:relative bottom-[.1rem] md:overflow-x-auto thin-scrollbar bg-white md:bg-transparent shadow-xl md:shadow-none border-b md:border-none border-slate-200 transition-all mt-[.6rem] md:mt-0`}
+            >
+                {/* Mobile Drawer Header */}
+                <div className="flex items-center justify-between w-full px-4 py-4 md:hidden border-b border-slate-100">
+                    <span className="text-xs font-bold uppercase tracking-wider text-blue-900">
+                        Navigation Menu
+                    </span>
+                    <Link to="/" className="w-[6rem] h-auto">
+                        <img src={mpoLogo} alt="Tri-Cities MPO logo" className="w-full h-auto object-contain" />
+                    </Link>
+                </div>
 
-                        {/* Dropdown Menu Panel */}
-                        {openChaptersDropdown && (
-                            <div className="absolute right-0 mt-2 w-80 lg:w-96 bg-white rounded-2xl border border-slate-200 shadow-xl py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                                <div className="px-4 pb-2 mb-2 border-b border-slate-100 flex items-center justify-between">
+                {/* Tabs Row: Report, Explore Chapters (Dropdown), Introduction, Trends & Forecast, System Today, System Tomorrow, Funding, Appendices */}
+                <div className="items-center gap-1.5 lg:gap-2 px-4 md:flex md:justify-center md:mt-2 md:min-w-max pb-1 space-y-1.5 md:space-y-0">
+                    {/* 1. Former Nav: Report */}
+                    <Tab title="Report" href="/" />
+
+                    {/* 2. Added: Explore Chapters with Dropdown */}
+                    <div className="relative border-b border-slate-100 md:border-none" ref={dropdownRef}>
+                        <div className="flex items-center">
+                            <NavLink
+                                to="/explore_chapters"
+                                className={({ isActive }) =>
+                                    `text-xs lg:text-[13px] flex items-center justify-between gap-1.5 py-2 md:py-1.5 pl-3 pr-2 md:pl-3 md:pr-2.5 w-full md:text-nowrap rounded-md font-semibold transition-colors cursor-pointer ${
+                                        isActive || isExploreActive
+                                            ? "bg-blue-950 text-white shadow-sm"
+                                            : "text-blue-950 bg-blue-50/80 hover:bg-blue-900 hover:text-white border border-blue-200/70"
+                                    }`
+                                }
+                            >
+                                <span className="flex items-center gap-1.5">
+                                    <FiBookOpen className="w-3.5 h-3.5 opacity-80" />
+                                    <span>Explore Chapters</span>
+                                </span>
+                                <button
+                                    type="button"
+                                    aria-label="Toggle chapters dropdown"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        setOpenDropdown((prev) => !prev);
+                                    }}
+                                    className="p-0.5 hover:bg-black/10 rounded transition-colors"
+                                >
+                                    <FiChevronDown
+                                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                                            openDropdown ? "rotate-180" : ""
+                                        }`}
+                                    />
+                                </button>
+                            </NavLink>
+                        </div>
+
+                        {/* Desktop Dropdown Panel */}
+                        {openDropdown && (
+                            <div className="hidden md:block absolute left-0 mt-1.5 w-80 lg:w-96 bg-white rounded-xl border border-slate-200 shadow-xl py-2.5 z-[600] animate-in fade-in slide-in-from-top-1 duration-150">
+                                <div className="px-3.5 pb-2 mb-1.5 border-b border-slate-100 flex items-center justify-between">
                                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
                                         PLAN2050 Chapters
                                     </span>
-                                    <span className="text-[10px] font-semibold text-blue-900 bg-blue-50 px-2 py-0.5 rounded-full">
-                                        {CHAPTERS.length} Chapters
-                                    </span>
+                                    <Link
+                                        to="/explore_chapters"
+                                        onClick={() => setOpenDropdown(false)}
+                                        className="text-[11px] font-bold text-blue-900 hover:underline flex items-center gap-1"
+                                    >
+                                        <span>Overview Page</span>
+                                        <FiArrowRight className="w-3 h-3" />
+                                    </Link>
                                 </div>
 
-                                <div className="max-h-[70vh] overflow-y-auto thin-scrollbar px-2 space-y-1">
-                                    {CHAPTERS.map((chapter) => {
+                                <div className="max-h-[60vh] overflow-y-auto thin-scrollbar px-2 space-y-1">
+                                    {ALL_CHAPTERS.map((chapter) => {
                                         const isCurrent = location.pathname === chapter.path;
                                         return (
                                             <Link
                                                 key={chapter.path}
                                                 to={chapter.path}
-                                                onClick={() => setOpenChaptersDropdown(false)}
-                                                className={`group flex items-start gap-3 p-2.5 rounded-xl transition-all ${
+                                                onClick={() => setOpenDropdown(false)}
+                                                className={`group flex items-start gap-3 p-2 rounded-lg transition-all ${
                                                     isCurrent
                                                         ? "bg-blue-50 border border-blue-200/80"
                                                         : "hover:bg-slate-50 border border-transparent"
                                                 }`}
                                             >
                                                 <span
-                                                    className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold transition-colors ${
+                                                    className={`shrink-0 w-7 h-7 rounded-md flex items-center justify-center text-xs font-bold transition-colors ${
                                                         isCurrent
                                                             ? "bg-blue-900 text-white shadow-xs"
                                                             : "bg-slate-100 text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-900"
@@ -175,7 +222,7 @@ function Navbar() {
                                                 <div className="flex-1 min-w-0">
                                                     <div className="flex items-center justify-between gap-1">
                                                         <span
-                                                            className={`text-xs lg:text-sm font-bold truncate ${
+                                                            className={`text-xs font-bold truncate ${
                                                                 isCurrent
                                                                     ? "text-blue-950"
                                                                     : "text-slate-800 group-hover:text-blue-950"
@@ -184,10 +231,10 @@ function Navbar() {
                                                             {chapter.title}
                                                         </span>
                                                         {isCurrent && (
-                                                            <FiCheck className="w-4 h-4 text-blue-900 shrink-0" />
+                                                            <FiCheck className="w-3.5 h-3.5 text-blue-900 shrink-0" />
                                                         )}
                                                     </div>
-                                                    <p className="text-[11px] text-slate-500 truncate mt-0.5">
+                                                    <p className="text-[11px] text-slate-500 truncate">
                                                         {chapter.subtitle}
                                                     </p>
                                                 </div>
@@ -197,91 +244,60 @@ function Navbar() {
                                 </div>
                             </div>
                         )}
+
+                        {/* Mobile Accordion for Chapters inside Mobile Menu */}
+                        {openDropdown && (
+                            <div className="md:hidden mt-2 ml-3 pl-3 border-l-2 border-blue-200 space-y-1 py-1">
+                                <Link
+                                    to="/explore_chapters"
+                                    onClick={() => setOpenMenu(false)}
+                                    className="block py-1.5 text-xs font-bold text-blue-950 hover:underline"
+                                >
+                                    &rarr; View Explore Chapters Overview
+                                </Link>
+                                {ALL_CHAPTERS.map((ch) => (
+                                    <Link
+                                        key={ch.path}
+                                        to={ch.path}
+                                        onClick={() => setOpenMenu(false)}
+                                        className={`flex items-center gap-2 py-1.5 text-xs ${
+                                            location.pathname === ch.path
+                                                ? "text-blue-900 font-bold"
+                                                : "text-slate-600 hover:text-blue-900"
+                                        }`}
+                                    >
+                                        <span className="font-mono text-[10px] bg-slate-100 px-1 py-0.5 rounded">
+                                            {ch.number}
+                                        </span>
+                                        <span>{ch.title}</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
                     </div>
-                </nav>
-            </div>
 
-            {/* Mobile Navigation Drawer */}
-            {openMobileMenu && (
-                <div
-                    ref={mobileMenuRef}
-                    className="md:hidden fixed inset-x-0 top-[4.25rem] bottom-0 bg-slate-900/40 backdrop-blur-xs z-40"
-                    onClick={(e) => {
-                        if (e.target === e.currentTarget) {
-                            setOpenMobileMenu(false);
-                        }
-                    }}
-                >
-                    <div className="bg-white border-b border-slate-200 shadow-xl max-h-[85vh] overflow-y-auto thin-scrollbar p-4 space-y-3">
-                        {/* 1. Report Link */}
-                        <NavLink
-                            to="/"
-                            onClick={() => setOpenMobileMenu(false)}
-                            className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-colors ${
-                                isReportActive
-                                    ? "bg-blue-950 text-white"
-                                    : "bg-slate-50 text-slate-800 hover:bg-slate-100"
-                            }`}
-                        >
-                            <FiFileText className="w-4 h-4" />
-                            <span>Report (Overview)</span>
-                        </NavLink>
+                    {/* 3. Former Nav: Introduction */}
+                    <Tab title="Introduction" href="/introduction" />
 
-                        {/* 2. Explore Chapters (Accordion) */}
-                        <div className="bg-slate-50 border border-slate-200 rounded-xl p-3">
-                            <button
-                                type="button"
-                                onClick={() => setMobileChaptersExpanded((prev) => !prev)}
-                                className="w-full flex items-center justify-between text-sm font-bold text-blue-950 pb-2 border-b border-slate-200"
-                            >
-                                <span className="flex items-center gap-2">
-                                    <FiBookOpen className="w-4 h-4 text-blue-900" />
-                                    <span>Explore Chapters</span>
-                                </span>
-                                <FiChevronDown
-                                    className={`w-4 h-4 text-slate-500 transition-transform ${
-                                        mobileChaptersExpanded ? "rotate-180" : ""
-                                    }`}
-                                />
-                            </button>
+                    {/* 4. Former Nav: National and Regional Trends and Forecasts */}
+                    <Tab
+                        title="National and Regional Trends and Forecasts"
+                        href="/trend_and_forecast"
+                    />
 
-                            {mobileChaptersExpanded && (
-                                <div className="mt-2.5 space-y-1.5 pt-1">
-                                    {CHAPTERS.map((chapter) => {
-                                        const isCurrent = location.pathname === chapter.path;
-                                        return (
-                                            <Link
-                                                key={chapter.path}
-                                                to={chapter.path}
-                                                onClick={() => setOpenMobileMenu(false)}
-                                                className={`flex items-center justify-between p-2.5 rounded-lg text-xs font-semibold transition-colors ${
-                                                    isCurrent
-                                                        ? "bg-blue-900 text-white font-bold"
-                                                        : "bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-900 border border-slate-200/80"
-                                                }`}
-                                            >
-                                                <div className="flex items-center gap-2.5 min-w-0">
-                                                    <span
-                                                        className={`shrink-0 px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                                                            isCurrent
-                                                                ? "bg-white/20 text-white"
-                                                                : "bg-slate-100 text-slate-600"
-                                                        }`}
-                                                    >
-                                                        {chapter.number}
-                                                    </span>
-                                                    <span className="truncate">{chapter.title}</span>
-                                                </div>
-                                                <FiArrowRight className="w-3.5 h-3.5 shrink-0 opacity-60" />
-                                            </Link>
-                                        );
-                                    })}
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    {/* 5. Former Nav: System Today */}
+                    <Tab title="System Today" href="/system_today" />
+
+                    {/* 6. Former Nav: System Tomorrow */}
+                    <Tab title="System Tomorrow" href="/system_tomorrow" />
+
+                    {/* 7. Former Nav: Funding */}
+                    <Tab title="Funding" href="/funding" />
+
+                    {/* 8. Former Nav: Appendices */}
+                    <Tab title="Appendices" href="/appendices" />
                 </div>
-            )}
+            </div>
         </header>
     );
 }

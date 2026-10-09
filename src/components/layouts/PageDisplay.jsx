@@ -7,7 +7,7 @@ function PageDisplay({ children }) {
         <div className="bg-white min-h-screen text-slate-800 flex flex-col">
             <ScrollProgress height="3" bgcolor="#1d4ed8" />
             <Navbar />
-            <div className="pt-[4.25rem] flex-1 flex flex-col">
+            <div className="pt-[3.6rem] md:pt-[5.5rem] flex-1 flex flex-col">
                 {children}
             </div>
         </div>

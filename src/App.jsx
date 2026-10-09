@@ -7,6 +7,7 @@ import SystemTomorrow from './pages/SystemTomorrow'
 import SystemToday from './pages/SystemToday'
 import Funding from './pages/Funding'
 import Appendices from "./pages/Appendices";
+import ExploreChapters from "./pages/ExploreChapters";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/summary" element={<Summary />} />
+                <Route path="/explore_chapters" element={<ExploreChapters />} />
                 <Route path="/introduction" element={<Introduction />} />
                 <Route path="/trend_and_forecast" element={<TrendAndForcast />} />
                 <Route path="/system_today" element={<SystemToday />} />

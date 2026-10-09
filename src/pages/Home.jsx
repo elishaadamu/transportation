@@ -26,7 +26,7 @@ function Home() {
                             to="/introduction"
                             className="flex items-center justify-between px-4 py-2.5 rounded-lg bg-blue-950 hover:bg-blue-900 text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm group"
                         >
-                            <span>Explore Chapter 1: Introduction</span>
+                            <span>Chapter 1: Introduction</span>
                             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                         </Link>
                         <Link

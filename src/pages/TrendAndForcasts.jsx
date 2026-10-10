@@ -69,12 +69,12 @@ function TrendAndForcasts() {
                 downloadUrl="/downloads/TCAMPO_Plan2050_Chapter2_National_and_Regional_Trends_and_Forecasts.pdf"
                 downloadFilename="TCAMPO_Plan2050_Chapter2_Trends_and_Forecasts.pdf"
             >
-                Chapter 2: National and Regional Trends and Forecasts
+                Chapter 2: Trends and Forecasts
             </PageHeader>
             <SectionWrapper>
                 <div className="flex flex-col md:flex-row items-start justify-center gap-8 max-w-[94rem] mx-auto px-4 sm:px-6 py-8 relative">
                     {/* Left Tabs Sidebar */}
-                    <TableOfContent sections={sections} title="Chapter 2 Tabs" />
+                    <TableOfContent sections={sections} />
 
                         {/* Content Area */}
                         <main className="flex-1 min-w-0 w-full flex flex-col items-center">

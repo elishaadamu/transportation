@@ -24,7 +24,7 @@ const CHAPTERS_DATA = [
     },
     {
         number: "02",
-        title: "Chapter 2: National and Regional Trends and Forecasts",
+        title: "Chapter 2: Trends and Forecasts",
         navTitle: "Trends and Forecasts",
         path: "/trend_and_forecast",
         badge: "Complete & Interactive",

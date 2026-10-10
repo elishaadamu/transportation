@@ -75,7 +75,7 @@ function Introduction() {
             <SectionWrapper>
                 <div className="flex flex-col md:flex-row items-start justify-center gap-8 max-w-[94rem] mx-auto px-4 sm:px-6 py-8 relative">
                     {/* Left Tabs Sidebar */}
-                    <TableOfContent sections={sections} title="Introduction Tabs" />
+                    <TableOfContent sections={sections} />
 
                         {/* Content Area */}
                         <main className="flex-1 min-w-0 w-full flex flex-col items-center">

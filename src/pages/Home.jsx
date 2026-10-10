@@ -6,50 +6,71 @@ import { plan2050Cover } from "../assets";
 function Home() {
     return (
         <PageDisplay>
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-8 max-w-[96rem] mx-auto px-4 sm:px-6 py-8 md:py-12 min-h-[82vh] bg-white">
-                {/* Executive Overview Panel on the Left */}
-                <div className="w-full xl:w-[26rem] shrink-0 bg-white border border-slate-200 border-t-4 border-t-blue-900 p-6 lg:p-8 rounded-xl shadow-sm">
-                    <div className="mb-4">
-                        <span className="text-xs uppercase tracking-wider text-blue-900 font-extrabold block mb-1">
-                            Tri-Cities Area MPO
-                        </span>
-                        <h2 className="text-2xl font-extrabold text-blue-950 tracking-tight">
+            <div className="h-[calc(100vh-5.5rem)] max-h-[calc(100vh-5.5rem)] flex flex-col lg:flex-row items-stretch justify-center gap-4 xl:gap-6 max-w-[98rem] mx-auto px-4 sm:px-6 py-2 lg:py-3 bg-white overflow-hidden">
+                {/* Executive Overview Panel on the Left - Scrollable Content */}
+                <div className="w-full lg:w-[27rem] xl:w-[29rem] shrink-0 h-[calc(100vh-7rem)] bg-white border border-slate-200 border-t-4 border-t-blue-900 p-5 xl:p-6 rounded-2xl shadow-sm flex flex-col justify-between overflow-y-auto thin-scrollbar">
+                    <div>
+                        <h2 className="text-2xl sm:text-[26px] xl:text-3xl font-extrabold text-blue-950 tracking-tight mb-3">
                             PLAN2050 Overview
                         </h2>
+                        <p className="text-sm sm:text-base leading-relaxed text-slate-700 mb-4">
+                            Each Metropolitan Planning Organization (MPO) must prepare and adopt a long-range transportation plan (PLAN2050) in accordance with federal regulations. The plan aim at creating a coordinated, multimodal transportation system that addresses the needs and objectives of the MPO, state, and transit providers. It must consider transit, highways, bicycle and pedestrian facilities, accessibility, and freight; accommodate current and future travel demand; and support economic development, transportation, land use, and sustainability goals over a minimum 20-year planning horizon while remaining fiscally constrained.
+                        </p>
                     </div>
-                    <p className="text-sm lg:text-[15px] leading-relaxed text-slate-600 mb-6">
-                        Each Metropolitan Planning Organization (MPO) must prepare and adopt a long-range transportation plan (PLAN2050) in accordance with federal regulations. The plan aim at creating a coordinated, multimodal transportation system that addresses the needs and objectives of the MPO, state, and transit providers. It must consider transit, highways, bicycle and pedestrian facilities, accessibility, and freight; accommodate current and future travel demand; and support economic development, transportation, land use, and sustainability goals over a minimum 20-year planning horizon while remaining fiscally constrained.
-                    </p>
 
-                    <div className="space-y-2 mb-6">
+                    {/* Chapter Navigation Links */}
+                    <div className="space-y-2 xl:space-y-2.5 pt-2">
                         <Link
                             to="/introduction"
-                            className="flex items-center justify-between px-4 py-2.5 rounded-lg bg-blue-950 hover:bg-blue-900 text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm group"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-950 hover:bg-blue-900 text-white text-sm sm:text-base font-semibold transition-colors shadow-xs group"
                         >
                             <span>Chapter 1: Introduction</span>
                             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                         </Link>
                         <Link
                             to="/trend_and_forecast"
-                            className="flex items-center justify-between px-4 py-2.5 rounded-lg bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-xs sm:text-sm font-semibold transition-colors"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
                         >
                             <span>Chapter 2: Trends and Forecasts</span>
-                            <span>&rarr;</span>
+                            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                         </Link>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-medium">
-                        <span>Planning Horizon: <strong className="text-slate-700">2050</strong></span>
-                        <span>Agency: <strong className="text-slate-700">TCAMPO MPO</strong></span>
+                        <Link
+                            to="/system_today"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
+                        >
+                            <span>Chapter 3: System Today</span>
+                            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </Link>
+                        <Link
+                            to="/system_tomorrow"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
+                        >
+                            <span>Chapter 4: System Tomorrow</span>
+                            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </Link>
+                        <Link
+                            to="/funding"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
+                        >
+                            <span>Chapter 5: Funding</span>
+                            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </Link>
+                        <Link
+                            to="/appendices"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
+                        >
+                            <span>Appendices</span>
+                            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </Link>
                     </div>
                 </div>
 
-                {/* Report Cover Image - fully visible, cleanly framed on white background */}
-                <div className="flex-1 w-full max-w-[65rem] xl:max-w-[70rem] rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white p-2 sm:p-3">
+                {/* Report Cover Image - Equal Height to Overview Panel */}
+                <div className="w-full flex-1 h-[calc(100vh-7rem)] rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex items-center justify-center">
                     <img
                         src={plan2050Cover}
                         alt="PLAN2050 Cover and Goals"
-                        className="w-full h-auto object-contain block rounded-lg"
+                        className="w-full h-full object-cover block"
                     />
                 </div>
             </div>

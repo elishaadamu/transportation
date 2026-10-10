@@ -39,11 +39,6 @@ function PageHeader({
             />
             <div className="relative max-w-[94rem] mx-auto flex flex-row items-end justify-between gap-3 flex-wrap">
                 <div className="flex-1 min-w-[200px]">
-                    <div className="mb-2.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-blue-300">
-                        <span>TCAMPO PLAN2050</span>
-                        <span className="text-blue-400 font-normal">&rsaquo;</span>
-                        <span className="text-white font-bold capitalize">{subtitle}</span>
-                    </div>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
                         {children}
                     </h1>
@@ -71,4 +66,3 @@ function PageHeader({
 }
 
 export default PageHeader;
-

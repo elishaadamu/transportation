@@ -276,12 +276,13 @@ function Navbar() {
                         )}
                     </div>
 
+
                     {/* 3. Former Nav: Introduction */}
                     <Tab title="Introduction" href="/introduction" />
 
-                    {/* 4. Former Nav: National and Regional Trends and Forecasts */}
+                    {/* 4. Former Nav: Trends and Forecasts */}
                     <Tab
-                        title="National and Regional Trends and Forecasts"
+                        title="Trends and Forecasts"
                         href="/trend_and_forecast"
                     />
 

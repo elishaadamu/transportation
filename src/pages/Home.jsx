@@ -22,7 +22,7 @@ function Home() {
                     <div className="space-y-2 xl:space-y-2.5 pt-2">
                         <Link
                             to="/explore_chapters"
-                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-950 hover:bg-blue-900 text-white text-sm sm:text-base font-semibold transition-colors shadow-xs group"
                         >
                             <span>Explore Chapters</span>
                             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>

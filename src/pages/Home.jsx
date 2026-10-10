@@ -21,8 +21,15 @@ function Home() {
                     {/* Chapter Navigation Links */}
                     <div className="space-y-2 xl:space-y-2.5 pt-2">
                         <Link
+                            to="/explore_chapters"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
+                        >
+                            <span>Explore Chapters</span>
+                            <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </Link>
+                        <Link
                             to="/introduction"
-                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-950 hover:bg-blue-900 text-white text-sm sm:text-base font-semibold transition-colors shadow-xs group"
+                            className="flex items-center justify-between px-4 py-2.5 sm:py-3 rounded-xl bg-blue-50/80 hover:bg-blue-100 text-blue-950 border border-blue-200/80 text-sm sm:text-base font-semibold transition-colors group"
                         >
                             <span>Chapter 1: Introduction</span>
                             <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -65,12 +72,12 @@ function Home() {
                     </div>
                 </div>
 
-                {/* Report Cover Image - Equal Height to Overview Panel */}
-                <div className="w-full flex-1 h-[calc(100vh-7rem)] rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex items-center justify-center">
+                {/* Report Cover Image - Full Uncropped View */}
+                <div className="w-full flex-1 h-[calc(100vh-7rem)] rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-1 sm:p-2">
                     <img
                         src={plan2050Cover}
                         alt="PLAN2050 Cover and Goals"
-                        className="w-full h-full object-cover block"
+                        className="w-full h-full object-contain block rounded-xl"
                     />
                 </div>
             </div>

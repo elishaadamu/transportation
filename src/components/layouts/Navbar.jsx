@@ -63,10 +63,9 @@ function Navbar() {
                     </Link>
                 </div>
 
-                {/* Tabs Row: Report, Explore Chapters, Introduction, Trends & Forecast, System Today, System Tomorrow, Funding, Appendices */}
+                {/* Tabs Row: Report, Introduction, Trends & Forecast, System Today, System Tomorrow, Funding, Appendices */}
                 <div className="items-center gap-1.5 lg:gap-2 px-4 md:flex md:justify-center md:mt-2 md:min-w-max pb-1 space-y-1.5 md:space-y-0">
                     <Tab title="Report" href="/" />
-                    <Tab title="Explore Chapters" href="/explore_chapters" />
                     <Tab title="Introduction" href="/introduction" />
                     <Tab title="Trends and Forecasts" href="/trend_and_forecast" />
                     <Tab title="System Today" href="/system_today" />
